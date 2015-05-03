@@ -8,8 +8,11 @@ USING_NS_CC;
 
 Scene* GameScene::createScene()
 {
-    // 'scene' is an autorelease object
-    auto scene = Scene::create();
+    // 'scene' is an autorelease object 
+	//auto scene = Scene::create(); Pavel comment
+
+	// 'scene' with physics
+	auto scene = Scene::createWithPhysics();
     
     // 'layer' is an autorelease object
     auto layer = GameScene::create();
@@ -38,8 +41,10 @@ bool GameScene::init()
     sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
     this->addChild(sprite, 0);
 
+	
 	BBall *ball = new BBall(this);
     
+	
     auto menu_item_1 = MenuItemFont::create("Go Back", CC_CALLBACK_1(GameScene::GoBack, this));
 
     auto menu =  Menu::create(menu_item_1, NULL);
