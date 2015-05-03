@@ -1,22 +1,24 @@
 #ifndef __BASKETBALL_OBJECT_H__
 #define __BASKETBALL_OBJECT_H__
 
+#include "cocos2d.h"
 
-class MyClass
+class BObject
 {
 public:
-	MyClass();
-	~MyClass();
+	BObject();
+	~BObject();
 
-private:
+protected:
+	cocos2d::Sprite sprite
 
 };
 
-MyClass::MyClass()
+BObject::BObject()
 {
 }
 
-MyClass::~MyClass()
+BObject::~BObject()
 {
 }
 
