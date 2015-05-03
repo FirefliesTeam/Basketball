@@ -10,7 +10,7 @@ class BBall : BObject
 		BBall();
 		BBall(cocos2d::Layer *layer);
 		~BBall();
-		void setPosition();
+		void setPosition(){};
 		void launch();
 		void fly();
 		bool onContactBegin();
