@@ -12,11 +12,11 @@ class BObject
 
 	protected:
 		cocos2d::Sprite				*sprite;
-		cocos2d::PhysicsBody		*physics_body;
+		cocos2d::PhysicsBody		*body;
 		cocos2d::Size				visible_size;
 		cocos2d::Vec2				origin;
 		unsigned int				bitmask;
-		cocos2d::PhysicsMaterial	*physics_material;
+		cocos2d::PhysicsMaterial	*material;
 };
 
 

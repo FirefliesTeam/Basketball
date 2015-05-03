@@ -3,15 +3,14 @@
 
 #define DISPLAY_TIME_SPLASH_SCENE 1
 #define TRANSITION_TIME 0.5
-
-<<<<<<< HEAD
+s
 #define BALL_COLLISION_BITMASK 0x000001
 #define BALL_DENSITY 0.1
 #define BALL_RESTITUTION 0.1
 #define BALL_FRICTION 0.1
-=======
+
 #define TEMP_DEFIN 45
->>>>>>> origin/master
+
 
 //#define PIPE_SPAWN_FREQUENCY 0.003
 //
