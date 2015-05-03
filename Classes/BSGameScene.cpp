@@ -36,6 +36,8 @@ bool GameScene::init()
     auto sprite = Sprite::create(BACKGROUND_GAME_SCENE);
     sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
     this->addChild(sprite, 0);
+
+	
     
     auto menu_item_1 = MenuItemFont::create("Go Back", CC_CALLBACK_1(GameScene::GoBack, this));
 
