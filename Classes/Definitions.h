@@ -4,6 +4,8 @@
 #define DISPLAY_TIME_SPLASH_SCENE 1
 #define TRANSITION_TIME 0.5
 
+#define TEMP_DEFIN 45
+
 //#define PIPE_SPAWN_FREQUENCY 0.003
 //
 //#define PIPE_GAP 10
