@@ -10,6 +10,9 @@
     <Filter Include="src">
       <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
     </Filter>
+    <Filter Include="BasketballObjects">
+      <UniqueIdentifier>{c7f1a33f-9ad1-4b70-a8c5-5354e28799ec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -32,6 +35,15 @@
     </ClCompile>
     <ClCompile Include="..\Classes\BSSplashScene.cpp">
       <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BasketballObjects\BOBall.cpp">
+      <Filter>BasketballObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BasketballObjects\BObject.cpp">
+      <Filter>BasketballObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BasketballObjects\BOPlank.cpp">
+      <Filter>BasketballObjects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -58,6 +70,15 @@
     </ClInclude>
     <ClInclude Include="..\Classes\BSSplashScene.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BasketballObjects\BOBall.h">
+      <Filter>BasketballObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BasketballObjects\BObject.h">
+      <Filter>BasketballObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BasketballObjects\BOPlank.h">
+      <Filter>BasketballObjects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
