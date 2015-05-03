@@ -45,7 +45,7 @@ bool SettingScene::init()
     return true;
 }
 
-void SettingScene::GoBack(cocos2d::Ref *pSender) {
+void SettingScene::GoBack(cocos2d::Ref *sender) {
     Director::getInstance()->popScene();
 }
 

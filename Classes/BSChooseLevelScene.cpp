@@ -46,7 +46,7 @@ bool ChooseLevelScene::init()
     return true;
 }
 
-void ChooseLevelScene::GoBack(cocos2d::Ref *pSender) {
+void ChooseLevelScene::GoBack(cocos2d::Ref *sender) {
     auto main_scene = MainScene::createScene();
     Director::getInstance()->replaceScene(main_scene);
 }

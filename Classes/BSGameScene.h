@@ -15,7 +15,7 @@ public:
     // implement the "static create()" method manually
     CREATE_FUNC(GameScene);
 
-    void GoBack(cocos2d::Ref *pSender);
+    void GoBack(cocos2d::Ref *sender);
 };
 
 #endif // __GAME_SCENE_H__
