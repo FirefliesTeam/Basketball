@@ -11,14 +11,20 @@ public:
     BPlank(cocos2d::Layer *layer);
     ~BPlank();
 
-    static BPlank* createWoodyPlank();
-    static BPlank* createMetalPlank();
-    static BPlank* createRubberPlank();
+    static BPlank* createWoodyPlank(cocos2d::Layer *layer);
+    static BPlank* createMetalPlank(cocos2d::Layer *layer);
+    static BPlank* createRubberPlank(cocos2d::Layer *layer);
 
     static int value;
 
+    void setPosition(cocos2d::Vec2 coord);
+    void Rotate(float angl);
+    void onContactBegin();
+
 private:
     int cost;
+    float rotate_angle;
+        
 
 };
 
