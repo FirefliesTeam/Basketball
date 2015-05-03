@@ -45,6 +45,7 @@ bool MainScene::init()
     menu_items.push_back(MenuItemFont::create("Setting",CC_CALLBACK_1(MainScene::GoToSetting, this)));
     menu_items.push_back(MenuItemFont::create("Exit",CC_CALLBACK_1(MainScene::menuCloseCallback, this)));
 
+	//Vasya comment
     //auto menu_item_1 = MenuItemFont::create("New game", CC_CALLBACK_1(MainScene::newGame, this));
     //auto menu_item_2 = MenuItemFont::create("Choose level",CC_CALLBACK_1(MainScene::chooseLevel, this));
     //auto menu_item_3 = MenuItemFont::create("Setting",CC_CALLBACK_1(MainScene::setting, this));
