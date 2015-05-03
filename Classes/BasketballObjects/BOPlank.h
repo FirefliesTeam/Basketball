@@ -15,7 +15,10 @@ public:
     static BPlank* createMetalPlank();
     static BPlank* createRubberPlank();
 
+    static int value;
+
 private:
+    int cost;
 
 };
 
