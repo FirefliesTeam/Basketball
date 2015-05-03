@@ -1,5 +1,5 @@
-#ifndef __HELLOWORLD_SCENE_H__
-#define __HELLOWORLD_SCENE_H__
+#ifndef __MAIN_SCENE_SCENE_H__
+#define __MAIN_SCENE_SCENE_H__
 
 #include "cocos2d.h"
 
@@ -18,9 +18,9 @@ public:
     // implement the "static create()" method manually
     CREATE_FUNC(MainScene);
 
-    void newGame(cocos2d::Ref *pSender);
-    void chooseLevel(cocos2d::Ref *pSender);
-    void setting(cocos2d::Ref *pSender);
+    void GoToNewGame(cocos2d::Ref *sender);
+    void GoToChooseLevel(cocos2d::Ref *sender);
+    void GoToSetting(cocos2d::Ref *sender);
 };
 
-#endif // __HELLOWORLD_SCENE_H__
+#endif // __MAIN_SCENE_SCENE_H__

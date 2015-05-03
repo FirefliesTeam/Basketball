@@ -35,32 +35,14 @@ bool MainScene::init()
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
-    /////////////////////////////
-    // 2. add a menu item with "X" image, which is clicked to quit the program
-    //    you may modify it.
-
-    // add a "close" icon to exit the progress. it's an autorelease object
-    //   auto closeItem = MenuItemImage::create(
-    //                                          "CloseNormal.png",
-    //                                          "CloseSelected.png",
-    //                                          CC_CALLBACK_1(MainScene::menuCloseCallback, this));
-    //   
-    //closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
-    //                               origin.y + closeItem->getContentSize().height/2));
-
-    //   auto menu = Menu::create(closeItem, NULL);
-    //   menu->setPosition(Vec2::ZERO);
-    //   this->addChild(menu, 1);
-
     auto sprite = Sprite::create(BACKGROUND_MAIN_SCENE);
     sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
     this->addChild(sprite, 0);
     
     std::vector<MenuItemFont*> menu_items;
-
-    menu_items.push_back(MenuItemFont::create("New game", CC_CALLBACK_1(MainScene::newGame, this)));
-    menu_items.push_back(MenuItemFont::create("Choose level",CC_CALLBACK_1(MainScene::chooseLevel, this)));
-    menu_items.push_back(MenuItemFont::create("Setting",CC_CALLBACK_1(MainScene::setting, this)));
+    menu_items.push_back(MenuItemFont::create("New game", CC_CALLBACK_1(MainScene::GoToNewGame, this)));
+    menu_items.push_back(MenuItemFont::create("Choose level",CC_CALLBACK_1(MainScene::GoToChooseLevel, this)));
+    menu_items.push_back(MenuItemFont::create("Setting",CC_CALLBACK_1(MainScene::GoToSetting, this)));
     menu_items.push_back(MenuItemFont::create("Exit",CC_CALLBACK_1(MainScene::menuCloseCallback, this)));
 
     //auto menu_item_1 = MenuItemFont::create("New game", CC_CALLBACK_1(MainScene::newGame, this));
@@ -70,28 +52,34 @@ bool MainScene::init()
 
     //auto main_menu =  Menu::create(menu_item_1, menu_item_2, menu_item_3, menu_item_4, NULL);
 
-    auto main_menu =  Menu::create();
-    for(size_t i = 0; i < menu_items.size(); ++i) {
-	    main_menu->addChild(menu_items[i]);
+    for(int i = 0; i < menu_items.size(); ++i) {
+        CCLOG("%i", (menu_items.size() - i));
+        menu_items[i]->setPosition(Point(visibleSize.width / 2 + origin.x, visibleSize.height / (menu_items.size() + 1) * (menu_items.size() - i) + origin.y));
     }
 
-    main_menu->alignItemsVertically();
+    auto main_menu =  Menu::create();
+    for(size_t i = 0; i < menu_items.size(); ++i) {
+	    main_menu->addChild(menu_items[i], 1);
+    }
+    //main_menu->alignItemsVertically();
+    main_menu->setPosition(Point::ZERO);
+
     this->addChild(main_menu, 1);
 
     return true;
 }
 
-void MainScene::newGame(cocos2d::Ref *pSender) {
+void MainScene::GoToNewGame(cocos2d::Ref *sender) {
     auto game_scene = GameScene::createScene();
     Director::getInstance()->replaceScene(game_scene);
 }
 
-void MainScene::chooseLevel(cocos2d::Ref *pSender) {
+void MainScene::GoToChooseLevel(cocos2d::Ref *sender) {
     auto choose_level_scene = ChooseLevelScene::createScene();
     Director::getInstance()->replaceScene(choose_level_scene);
 }
 
-void MainScene::setting(cocos2d::Ref *pSender) {
+void MainScene::GoToSetting(cocos2d::Ref *sender) {
     auto setting_scene = SettingScene::createScene();
     Director::getInstance()->pushScene(setting_scene);
 }
