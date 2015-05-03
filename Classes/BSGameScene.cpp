@@ -38,12 +38,12 @@ bool GameScene::init()
     sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
     this->addChild(sprite, 0);
 
-	BBall ball();
+	BBall *ball = new BBall();
     
     auto menu_item_1 = MenuItemFont::create("Go Back", CC_CALLBACK_1(GameScene::GoBack, this));
 
     auto menu =  Menu::create(menu_item_1, NULL);
-	menu->setPosition(Vec2(visibleSize.width/4*3 + origin.x, visibleSize.height/4*3 + origin.y));
+	menu->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
     this->addChild(menu, 1);
 	
 
