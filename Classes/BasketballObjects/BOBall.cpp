@@ -1,5 +1,5 @@
 #include "BOBall.h"
-#include "Definitions.h"
+#include "../Definitions/DefForBall.h"
 
 USING_NS_CC;
 

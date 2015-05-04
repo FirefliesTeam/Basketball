@@ -1,5 +1,5 @@
 #include "BSSplashScene.h"
-#include "Definitions.h"
+#include "../Definitions/DefForScenes.h"
 #include "BSMainScene.h"
 
 USING_NS_CC;
@@ -34,7 +34,7 @@ bool SplashScene::init()
 
     this->scheduleOnce(schedule_selector(SplashScene::GoToMainScene), DISPLAY_TIME_SPLASH_SCENE);
     
-    auto background_sprite = Sprite::create("splash.png");
+    auto background_sprite = Sprite::create(BACKGROUND_SPLASH_SCENE);
     background_sprite->setPosition(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y);
 
     this->addChild(background_sprite);

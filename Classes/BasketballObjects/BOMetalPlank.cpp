@@ -1,5 +1,5 @@
 #include "BOMetalPlank.h"
-#include "Definitions.h"
+#include "../Definitions/DefForPlanks.h"
 
 USING_NS_CC;
 

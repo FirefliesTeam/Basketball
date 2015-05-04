@@ -1,17 +1,20 @@
-#include "BSChooseLevelScene.h"
+#include "BSGameScene.h"
 #include "BSMainScene.h"
-
-#define BACKGROUND_CHOOSE_LEVEL_SCENE "background_4.png"
+#include "../BasketballObjects/BOBall.h"
+#include "../Definitions/DefForScenes.h"
 
 USING_NS_CC;
 
-Scene* ChooseLevelScene::createScene()
+Scene* GameScene::createScene()
 {
-    // 'scene' is an autorelease object
-    auto scene = Scene::create();
+    // 'scene' is an autorelease object 
+	//auto scene = Scene::create(); Pavel comment
+
+	// 'scene' with physics
+	auto scene = Scene::createWithPhysics();
     
     // 'layer' is an autorelease object
-    auto layer = ChooseLevelScene::create();
+    auto layer = GameScene::create();
 
     // add layer as a child to scene
     scene->addChild(layer);
@@ -21,7 +24,7 @@ Scene* ChooseLevelScene::createScene()
 }
 
 // on "init" you need to initialize your instance
-bool ChooseLevelScene::init()
+bool GameScene::init()
 {
     //////////////////////////////
     // 1. super init first
@@ -33,20 +36,25 @@ bool ChooseLevelScene::init()
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
-    auto sprite = Sprite::create(BACKGROUND_CHOOSE_LEVEL_SCENE);
+    auto sprite = Sprite::create(BACKGROUND_GAME_SCENE);
     sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
     this->addChild(sprite, 0);
+
+	
+	BBall *ball = new BBall(this);
     
-    auto menu_item_1 = MenuItemFont::create("Go Back 2", CC_CALLBACK_1(ChooseLevelScene::GoBack, this));
+	
+    auto menu_item_1 = MenuItemFont::create("Go Back", CC_CALLBACK_1(GameScene::GoBack, this));
 
     auto menu =  Menu::create(menu_item_1, NULL);
-    menu->alignItemsVertically();
+	menu->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
     this->addChild(menu, 1);
+	
 
     return true;
 }
 
-void ChooseLevelScene::GoBack(cocos2d::Ref *sender) {
+void GameScene::GoBack(cocos2d::Ref *sender) {
     auto main_scene = MainScene::createScene();
     Director::getInstance()->replaceScene(main_scene);
 }

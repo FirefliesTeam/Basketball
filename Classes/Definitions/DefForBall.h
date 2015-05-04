@@ -1,0 +1,9 @@
+#ifndef __DEF_FOR_BALL_H__
+#define __DEF_FOR_BALL_H__
+
+#define BALL_COLLISION_BITMASK 0x000001
+#define BALL_DENSITY 0.1
+#define BALL_RESTITUTION 0.1
+#define BALL_FRICTION 0.1
+
+#endif // __DEF_FOR_BALL_H__

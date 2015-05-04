@@ -1,6 +1,5 @@
 #include "BSSettingScene.h"
-
-#define BACKGROUND_SETTING_SCENE "background_5.png"
+#include "../Definitions/DefForScenes.h"
 
 USING_NS_CC;
 

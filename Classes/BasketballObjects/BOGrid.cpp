@@ -1,5 +1,5 @@
 #include "BOGrid.h"
-#include "Definitions.h"
+#include "../Definitions/DefForGrid.h"
 
 USING_NS_CC;
 

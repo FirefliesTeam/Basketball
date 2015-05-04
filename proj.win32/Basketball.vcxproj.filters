@@ -13,27 +13,21 @@
     <Filter Include="BasketballObjects">
       <UniqueIdentifier>{c7f1a33f-9ad1-4b70-a8c5-5354e28799ec}</UniqueIdentifier>
     </Filter>
+    <Filter Include="TempScens">
+      <UniqueIdentifier>{3268d990-0210-4bbe-9564-829a5fa6883e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes">
+      <UniqueIdentifier>{7034c282-dd06-4573-9265-8e8ffb13b792}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Definitions">
+      <UniqueIdentifier>{28b78583-ac7d-4a3b-b391-f6ede268d960}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>win32</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\AppDelegate.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BSMainScene.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BSSettingScene.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BSGameScene.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BSChooseLevelScene.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BSSplashScene.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\BasketballObjects\BOBall.cpp">
@@ -57,30 +51,30 @@
     <ClCompile Include="..\Classes\BasketballObjects\BOWoodenPlank.cpp">
       <Filter>BasketballObjects</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\BSChooseLevelScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\BSGameScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\BSMainScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\BSSettingScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\BSSplashScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Temp\tempScene.cpp">
+      <Filter>TempScens</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
       <Filter>win32</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\AppDelegate.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BSMainScene.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BSSettingScene.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BSGameScene.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BSChooseLevelScene.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Definitions.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BSSplashScene.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\BasketballObjects\BOBall.h">
@@ -103,6 +97,39 @@
     </ClInclude>
     <ClInclude Include="..\Classes\BasketballObjects\BOWoodenPlank.h">
       <Filter>BasketballObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\BSChooseLevelScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\BSGameScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\BSMainScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\BSSettingScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\BSSplashScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Temp\tempScene.h">
+      <Filter>TempScens</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Definitions\DefForBall.h">
+      <Filter>Definitions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Definitions\DefForGrid.h">
+      <Filter>Definitions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Definitions\DefForPlanks.h">
+      <Filter>Definitions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Definitions\DefForScenes.h">
+      <Filter>Definitions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Definitions\Definitions.h">
+      <Filter>Definitions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

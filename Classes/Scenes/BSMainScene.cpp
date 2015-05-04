@@ -2,8 +2,7 @@
 #include "BSGameScene.h"
 #include "BSChooseLevelScene.h"
 #include "BSSettingScene.h"
-
-#define BACKGROUND_MAIN_SCENE "background_2.png"
+#include "../Definitions/DefForScenes.h"
 
 USING_NS_CC;
 
