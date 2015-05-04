@@ -45,6 +45,18 @@
     <ClCompile Include="..\Classes\BasketballObjects\BOPlank.cpp">
       <Filter>BasketballObjects</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\BasketballObjects\BOGrid.cpp">
+      <Filter>BasketballObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BasketballObjects\BOMetalPlank.cpp">
+      <Filter>BasketballObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BasketballObjects\BORubberPlank.cpp">
+      <Filter>BasketballObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BasketballObjects\BOWoodenPlank.cpp">
+      <Filter>BasketballObjects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -78,6 +90,18 @@
       <Filter>BasketballObjects</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\BasketballObjects\BOPlank.h">
+      <Filter>BasketballObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BasketballObjects\BOGrid.h">
+      <Filter>BasketballObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BasketballObjects\BOMetalPlank.h">
+      <Filter>BasketballObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BasketballObjects\BORubberPlank.h">
+      <Filter>BasketballObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BasketballObjects\BOWoodenPlank.h">
       <Filter>BasketballObjects</Filter>
     </ClInclude>
   </ItemGroup>
