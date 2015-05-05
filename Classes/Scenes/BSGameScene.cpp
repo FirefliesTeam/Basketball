@@ -42,7 +42,7 @@ bool GameScene::init()
     this->addChild(sprite, 0);
 
 	
-	BBall *ball = new BBall(this);
+	ball = new BBall(this);
 	this -> edgeBoxInit();
 	this -> setEventListeners(ball);
 	
@@ -77,7 +77,38 @@ void GameScene::setEventListeners(BBall *ball) {
 	touch_listener -> setSwallowTouches(true);
 	touch_listener -> onTouchBegan = CC_CALLBACK_2(BBall::TstartLaunching, ball);*/
 	
+	/*
 	auto touch_listener = EventListenerMouse::create();
 	touch_listener -> onMouseDown = CC_CALLBACK_1(BBall::startLaunching, ball);
 	Director::getInstance() -> getEventDispatcher() -> addEventListenerWithSceneGraphPriority(touch_listener, this);
+	*/
+	auto touch_listener = EventListenerTouchOneByOne::create();
+	touch_listener -> setSwallowTouches(true);
+	touch_listener -> onTouchBegan = CC_CALLBACK_2(GameScene::startBallLaunching, this);
+	touch_listener -> onTouchMoved = CC_CALLBACK_2(GameScene::setBallImpulse, this);	
+	touch_listener -> onTouchEnded = CC_CALLBACK_2(GameScene::launchBall, this);	
+	this -> getEventDispatcher() -> addEventListenerWithSceneGraphPriority(touch_listener, this);
+}
+
+bool GameScene::startBallLaunching(Touch *touch, Event *_event) {
+	
+	ball -> startLaunching(touch);
+	/*
+	auto touch_listener = EventListenerTouchOneByOne::create();
+	touch_listener -> setSwallowTouches(true);
+	touch_listener -> onTouchMoved = CC_CALLBACK_2(GameScene::setBallImpulse, this);	
+	touch_listener -> onTouchEnded = CC_CALLBACK_2(GameScene::launchBall, this);	
+	this -> getEventDispatcher() -> addEventListenerWithSceneGraphPriority(touch_listener, this);
+	*/
+	return true;
+}
+
+void GameScene::setBallImpulse(cocos2d::Touch *touch, cocos2d::Event *_event) {
+	ball -> setImpulse(touch);
+	
+}
+
+void GameScene::launchBall(cocos2d::Touch *touch, cocos2d::Event *_event) {
+	ball -> launch(touch);
+
 }
