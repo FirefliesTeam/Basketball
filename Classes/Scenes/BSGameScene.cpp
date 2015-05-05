@@ -42,7 +42,8 @@ bool GameScene::init()
 
 	
 	BBall *ball = new BBall(this);
-    
+	this -> edgeBoxInit();
+	this -> setEventListeners(ball);
 	
     auto menu_item_1 = MenuItemFont::create("Go Back", CC_CALLBACK_1(GameScene::GoBack, this));
 
@@ -59,3 +60,20 @@ void GameScene::GoBack(cocos2d::Ref *sender) {
     Director::getInstance()->replaceScene(main_scene);
 }
 
+void GameScene::edgeBoxInit() {
+	Size visible_size = cocos2d::Director::getInstance() -> getVisibleSize();
+	Vec2 origin = cocos2d::Director::getInstance() -> getVisibleOrigin();
+	auto edgeBody = PhysicsBody::createEdgeBox(visible_size, PHYSICSBODY_MATERIAL_DEFAULT);
+	auto edgeNode = Node::create();
+	edgeNode -> setPosition(Point(visible_size.width/2 + origin.x, visible_size.height/2 + origin.y));
+	edgeNode -> setPhysicsBody(edgeBody);
+	this -> addChild(edgeNode);
+}
+
+void GameScene::setEventListeners(BBall *ball) {
+	auto touch_listener = EventListenerMouse::create();
+	touch_listener -> onMouseDown = CC_CALLBACK_1(BBall::launchingBall, ball);
+
+	auto event_dispatcher = this -> getEventDispatcher();
+	event_dispatcher -> addEventListenerWithSceneGraphPriority(touch_listener, this);
+}

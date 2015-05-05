@@ -1,5 +1,5 @@
 #include "AppDelegate.h"
-#include "BSSplashScene.h"
+#include "Scenes\BSSplashScene.h"
 
 USING_NS_CC;
 
