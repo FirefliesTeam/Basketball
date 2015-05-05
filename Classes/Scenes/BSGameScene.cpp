@@ -12,6 +12,7 @@ Scene* GameScene::createScene()
 
 	// 'scene' with physics
 	auto scene = Scene::createWithPhysics();
+	scene -> getPhysicsWorld() -> setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
     
     // 'layer' is an autorelease object
     auto layer = GameScene::create();
@@ -48,7 +49,7 @@ bool GameScene::init()
     auto menu_item_1 = MenuItemFont::create("Go Back", CC_CALLBACK_1(GameScene::GoBack, this));
 
     auto menu =  Menu::create(menu_item_1, NULL);
-	menu->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+	menu->setPosition(Vec2(visibleSize.width/10  + origin.x, visibleSize.height/10 + origin.y));
     this->addChild(menu, 1);
 	
 
@@ -67,13 +68,16 @@ void GameScene::edgeBoxInit() {
 	auto edgeNode = Node::create();
 	edgeNode -> setPosition(Point(visible_size.width/2 + origin.x, visible_size.height/2 + origin.y));
 	edgeNode -> setPhysicsBody(edgeBody);
-	this -> addChild(edgeNode);
+	this -> addChild(edgeNode,0);
 }
 
 void GameScene::setEventListeners(BBall *ball) {
+	
+	/*auto touch_listener = EventListenerTouchOneByOne::create();
+	touch_listener -> setSwallowTouches(true);
+	touch_listener -> onTouchBegan = CC_CALLBACK_2(BBall::TstartLaunching, ball);*/
+	
 	auto touch_listener = EventListenerMouse::create();
-	touch_listener -> onMouseDown = CC_CALLBACK_1(BBall::launchingBall, ball);
-
-	auto event_dispatcher = this -> getEventDispatcher();
-	event_dispatcher -> addEventListenerWithSceneGraphPriority(touch_listener, this);
+	touch_listener -> onMouseDown = CC_CALLBACK_1(BBall::startLaunching, ball);
+	Director::getInstance() -> getEventDispatcher() -> addEventListenerWithSceneGraphPriority(touch_listener, this);
 }
