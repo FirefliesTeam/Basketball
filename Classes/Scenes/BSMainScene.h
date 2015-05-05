@@ -21,6 +21,10 @@ public:
     void GoToNewGame(cocos2d::Ref *sender);
     void GoToChooseLevel(cocos2d::Ref *sender);
     void GoToSetting(cocos2d::Ref *sender);
+
+    ////////////////////////// GO TO tempScene
+    void GoToTempScene(cocos2d::Ref *sender);
+    /////////////////////////
 };
 
 #endif // __MAIN_SCENE_SCENE_H__

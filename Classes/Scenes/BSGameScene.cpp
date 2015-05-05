@@ -58,7 +58,7 @@ bool GameScene::init()
 
 void GameScene::GoBack(cocos2d::Ref *sender) {
     auto main_scene = MainScene::createScene();
-    Director::getInstance()->replaceScene(main_scene);
+    Director::getInstance()->replaceScene(TransitionFade::create(TRANSITION_TIME, main_scene));
 }
 
 void GameScene::edgeBoxInit() {
@@ -81,6 +81,7 @@ void GameScene::setEventListeners(BBall *ball) {
 	auto touch_listener = EventListenerMouse::create();
 	touch_listener -> onMouseDown = CC_CALLBACK_1(BBall::startLaunching, ball);
 	Director::getInstance() -> getEventDispatcher() -> addEventListenerWithSceneGraphPriority(touch_listener, this);
+<<<<<<< HEAD
 	*/
 	auto touch_listener = EventListenerTouchOneByOne::create();
 	touch_listener -> setSwallowTouches(true);
@@ -111,4 +112,6 @@ void GameScene::setBallImpulse(cocos2d::Touch *touch, cocos2d::Event *_event) {
 void GameScene::launchBall(cocos2d::Touch *touch, cocos2d::Event *_event) {
 	ball -> launch(touch);
 
+=======
+>>>>>>> origin/master
 }

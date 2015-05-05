@@ -47,6 +47,6 @@ bool ChooseLevelScene::init()
 
 void ChooseLevelScene::GoBack(cocos2d::Ref *sender) {
     auto main_scene = MainScene::createScene();
-    Director::getInstance()->replaceScene(main_scene);
+    Director::getInstance()->replaceScene(TransitionFade::create(TRANSITION_TIME, main_scene));
 }
 

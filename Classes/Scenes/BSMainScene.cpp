@@ -3,6 +3,7 @@
 #include "BSChooseLevelScene.h"
 #include "BSSettingScene.h"
 #include "../Definitions/DefForScenes.h"
+#include "../Temp/tempScene.h"
 
 USING_NS_CC;
 
@@ -64,6 +65,12 @@ bool MainScene::init()
     //main_menu->alignItemsVertically();
     main_menu->setPosition(Point::ZERO);
 
+    //////////////////////////// GO TO tempScene
+    auto menu_item_go_to_tempScene = MenuItemFont::create("TempScene", CC_CALLBACK_1(MainScene::GoToTempScene,this));
+    menu_item_go_to_tempScene->setPosition(Point(visibleSize.width / 4 + origin.x, visibleSize.height / 5 * 4 + origin.y));
+    main_menu->addChild(menu_item_go_to_tempScene);
+    ////////////////////////////
+
     this->addChild(main_menu, 1);
 
     return true;
@@ -71,17 +78,17 @@ bool MainScene::init()
 
 void MainScene::GoToNewGame(cocos2d::Ref *sender) {
     auto game_scene = GameScene::createScene();
-    Director::getInstance()->replaceScene(game_scene);
+    Director::getInstance()->replaceScene(TransitionFade::create(TRANSITION_TIME, game_scene));
 }
 
 void MainScene::GoToChooseLevel(cocos2d::Ref *sender) {
     auto choose_level_scene = ChooseLevelScene::createScene();
-    Director::getInstance()->replaceScene(choose_level_scene);
+    Director::getInstance()->replaceScene(TransitionFade::create(TRANSITION_TIME, choose_level_scene));
 }
 
 void MainScene::GoToSetting(cocos2d::Ref *sender) {
     auto setting_scene = SettingScene::createScene();
-    Director::getInstance()->pushScene(setting_scene);
+    Director::getInstance()->pushScene(TransitionFade::create(TRANSITION_TIME, setting_scene));
 }
 
 void MainScene::menuCloseCallback(Ref* pSender)
@@ -97,3 +104,10 @@ void MainScene::menuCloseCallback(Ref* pSender)
     exit(0);
 #endif
 }
+
+///////////////////////////////// GO TO tempScene
+void MainScene::GoToTempScene(cocos2d::Ref *sender) {
+    auto temp_scene = TempScene::createScene();
+    Director::getInstance()->replaceScene(TransitionFade::create(TRANSITION_TIME, temp_scene));
+}
+/////////////////////////////////
