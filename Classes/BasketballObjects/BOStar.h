@@ -6,7 +6,7 @@
 
 class BStar: public BObject {
 public:
-    
+    void Remove();
 protected:
     
 };
