@@ -131,6 +131,9 @@
     <ClInclude Include="..\Classes\Definitions\Definitions.h">
       <Filter>Definitions</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\Definitions\DefForSriteTags.h">
+      <Filter>Definitions</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">

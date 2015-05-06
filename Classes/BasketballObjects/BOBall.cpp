@@ -1,5 +1,7 @@
 #include "BOBall.h"
 #include "../Definitions/DefForBall.h"
+#include "../Definitions/DefForSriteTags.h"
+#include <math.h>
 
 USING_NS_CC;
 
@@ -17,6 +19,7 @@ BBall::BBall(Layer *layer) : BObject() {
 
 }
 
+/*
 float BBall::getLaunchingRotation(Vec2& ball_position, Vec2& touch_position) {
 	float rotate_angle = (touch_position - ball_position).getAngle();
 	rotate_angle = rotate_angle * 180 / 3.14;
@@ -56,6 +59,51 @@ void BBall::launch(cocos2d::Touch *touch) {
 		body -> applyImpulse((ball_position - touch_position)*1000);
 		is_flying = true;
 		Director::getInstance() -> getRunningScene() -> removeChildByTag(1);
+	}
+}
+*/
+
+float BBall::getLaunchingRotation(Vec2& start_touch_position, Vec2& current_touch_position) {
+	float rotate_angle = (current_touch_position - start_touch_position).getAngle();
+	//перевод угла из радиан в градусы
+	rotate_angle = rotate_angle * M_1_PI * ANGLE_180_DEGREES;
+	return  rotate_angle + ANGLE_90_DEGREES;
+}
+
+void  BBall::startLaunching(cocos2d::Touch *touch) {
+	if (!is_flying) {
+		Vec2 current_touch_position = touch -> getLocationInView();
+		Vec2 start_touch_position = touch -> getStartLocationInView();
+		
+		auto impulse_vector = Sprite::create("arrow_sprite.png");
+		impulse_vector -> setPosition(this -> sprite -> getPosition());
+		impulse_vector -> setAnchorPoint(Vec2(0.5,1));
+		impulse_vector -> setTag(IMPULSE_VECTOR_TAG);
+		impulse_vector -> setScale((start_touch_position - current_touch_position).getLength() * IMPULSE_VECTOR_SCALE_RATIO);
+		impulse_vector -> setRotation(this -> getLaunchingRotation(start_touch_position, current_touch_position));
+		Director::getInstance() ->getRunningScene() -> addChild(impulse_vector, 0);
+	}
+}
+
+void BBall::setImpulse(cocos2d::Touch *touch) {
+	if (!is_flying) {
+		Vec2 current_touch_position = touch -> getLocationInView();
+		Vec2 start_touch_position = touch -> getStartLocationInView();
+		auto impulse_vector = Director::getInstance() -> getRunningScene() -> getChildByTag(1);
+		impulse_vector -> setRotation(getLaunchingRotation(start_touch_position, current_touch_position));
+		if(impulse_vector -> getScale() < IMPULSE_VECTOR_MAX_SCALE) {
+			impulse_vector -> setScale((start_touch_position - current_touch_position).getLength() * IMPULSE_VECTOR_SCALE_RATIO);
+		}
+	}
+}
+
+void BBall::launch(cocos2d::Touch *touch) {
+	if (!is_flying) {
+		body -> setGravityEnable(true);
+		Vec2 impulse_vector = touch -> getStartLocationInView() - touch -> getLocation();
+		body -> applyImpulse(impulse_vector * IMPULSE_VECTOR_IMPULSE_RATIO);
+		is_flying = true;
+		Director::getInstance() -> getRunningScene() -> removeChildByTag(IMPULSE_VECTOR_TAG);
 	}
 }
 
