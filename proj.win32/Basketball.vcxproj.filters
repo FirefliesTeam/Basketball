@@ -137,6 +137,7 @@
     <ClInclude Include="..\Classes\Definitions\Definitions.h">
       <Filter>Definitions</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="..\Classes\BasketballObjects\BOStar.h">
       <Filter>BasketballObjects</Filter>
     </ClInclude>
@@ -144,6 +145,9 @@
       <Filter>BasketballObjects</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Definitions\DefForStar.h">
+=======
+    <ClInclude Include="..\Classes\Definitions\DefForSriteTags.h">
+>>>>>>> origin/master
       <Filter>Definitions</Filter>
     </ClInclude>
   </ItemGroup>

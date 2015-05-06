@@ -23,7 +23,12 @@ public:
 
 	void setEventListeners(BBall *ball);
 
-	void launchingBall(cocos2d::Ref *sender);
+	bool startBallLaunching(cocos2d::Touch *touch, cocos2d::Event *_event);
+	void setBallImpulse(cocos2d::Touch *touch, cocos2d::Event *_event);
+	void launchBall(cocos2d::Touch *touch, cocos2d::Event *_event);
+
+private:
+	BBall *ball;
 };
 
 #endif // __GAME_SCENE_H__

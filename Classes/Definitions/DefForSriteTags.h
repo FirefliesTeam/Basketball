@@ -1,0 +1,6 @@
+#ifndef __DEF_FOR_SPRITE_TAGS_H__
+#define __DEF_FOR_SPRITE_TAGS_H__
+
+#define IMPULSE_VECTOR_TAG 1
+
+#endif // __DEF_FOR_SPRITE_TAGS_H__
