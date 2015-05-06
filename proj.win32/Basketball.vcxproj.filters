@@ -1,55 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="win32">
-      <UniqueIdentifier>{84a8ebd7-7cf0-47f6-b75e-d441df67da40}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="resource">
-      <UniqueIdentifier>{715254bc-d70b-4ec5-bf29-467dd3ace079}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src">
-      <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="BasketballObjects">
-      <UniqueIdentifier>{c7f1a33f-9ad1-4b70-a8c5-5354e28799ec}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="TempScens">
-      <UniqueIdentifier>{3268d990-0210-4bbe-9564-829a5fa6883e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Scenes">
-      <UniqueIdentifier>{7034c282-dd06-4573-9265-8e8ffb13b792}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Definitions">
-      <UniqueIdentifier>{28b78583-ac7d-4a3b-b391-f6ede268d960}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\AppDelegate.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BasketballObjects\BOBall.cpp">
-      <Filter>BasketballObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BasketballObjects\BObject.cpp">
-      <Filter>BasketballObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BasketballObjects\BOPlank.cpp">
-      <Filter>BasketballObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BasketballObjects\BOGrid.cpp">
-      <Filter>BasketballObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BasketballObjects\BOMetalPlank.cpp">
-      <Filter>BasketballObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BasketballObjects\BORubberPlank.cpp">
-      <Filter>BasketballObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BasketballObjects\BOWoodenPlank.cpp">
-      <Filter>BasketballObjects</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Scenes\BSChooseLevelScene.cpp">
       <Filter>Scenes</Filter>
@@ -66,43 +19,46 @@
     <ClCompile Include="..\Classes\Scenes\BSSplashScene.cpp">
       <Filter>Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Temp\tempScene.cpp">
-      <Filter>TempScens</Filter>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\BasketballObjects\BOStar.cpp">
-      <Filter>BasketballObjects</Filter>
+    <ClCompile Include="..\Classes\Temp\tempScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BasketballObjects\BOBall.cpp">
+      <Filter>Objects</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\BasketballObjects\BOBasket.cpp">
-      <Filter>BasketballObjects</Filter>
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BasketballObjects\BObject.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BasketballObjects\BOGrid.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BasketballObjects\BOMetalPlank.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BasketballObjects\BOPlank.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BasketballObjects\BORubberPlank.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BasketballObjects\BOStar.cpp">
+      <Filter>Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BasketballObjects\BOWoodenPlank.cpp">
+      <Filter>Objects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
       <Filter>win32</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\AppDelegate.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BasketballObjects\BOBall.h">
-      <Filter>BasketballObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BasketballObjects\BObject.h">
-      <Filter>BasketballObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BasketballObjects\BOPlank.h">
-      <Filter>BasketballObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BasketballObjects\BOGrid.h">
-      <Filter>BasketballObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BasketballObjects\BOMetalPlank.h">
-      <Filter>BasketballObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BasketballObjects\BORubberPlank.h">
-      <Filter>BasketballObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BasketballObjects\BOWoodenPlank.h">
-      <Filter>BasketballObjects</Filter>
+    <ClInclude Include="..\Classes\Scenes\BSSplashScene.h">
+      <Filter>Scenes</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Scenes\BSChooseLevelScene.h">
       <Filter>Scenes</Filter>
@@ -116,11 +72,14 @@
     <ClInclude Include="..\Classes\Scenes\BSSettingScene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Scenes\BSSplashScene.h">
-      <Filter>Scenes</Filter>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Temp\tempScene.h">
-      <Filter>TempScens</Filter>
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Definitions\Definitions.h">
+      <Filter>Definitions</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Definitions\DefForBall.h">
       <Filter>Definitions</Filter>
@@ -134,22 +93,59 @@
     <ClInclude Include="..\Classes\Definitions\DefForScenes.h">
       <Filter>Definitions</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Definitions\Definitions.h">
+    <ClInclude Include="..\Classes\Definitions\DefForSriteTags.h">
       <Filter>Definitions</Filter>
-    </ClInclude>
-<<<<<<< HEAD
-    <ClInclude Include="..\Classes\BasketballObjects\BOStar.h">
-      <Filter>BasketballObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BasketballObjects\BOBasket.h">
-      <Filter>BasketballObjects</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Definitions\DefForStar.h">
-=======
-    <ClInclude Include="..\Classes\Definitions\DefForSriteTags.h">
->>>>>>> origin/master
       <Filter>Definitions</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\BasketballObjects\BOWoodenPlank.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BasketballObjects\BOBall.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BasketballObjects\BOBasket.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BasketballObjects\BObject.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BasketballObjects\BOGrid.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BasketballObjects\BOMetalPlank.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BasketballObjects\BOPlank.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BasketballObjects\BORubberPlank.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BasketballObjects\BOStar.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="resource">
+      <UniqueIdentifier>{1dbc0484-fd61-4dd7-8688-d41b02df00fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="win32">
+      <UniqueIdentifier>{09f09f06-d9cf-4c91-9d82-8dc15e4bd066}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes">
+      <UniqueIdentifier>{f9afb27a-b284-4db9-b417-f660b9164be5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{56a1aa5a-a268-44b5-97c8-f4f07456a72c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Definitions">
+      <UniqueIdentifier>{e74115a6-b479-4428-8b6e-f830c0b3b6ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects">
+      <UniqueIdentifier>{83fade34-ff58-4bf3-936f-b6aa3f487f44}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">
