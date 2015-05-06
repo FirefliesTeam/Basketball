@@ -141,11 +141,13 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\BasketballObjects\BOBall.cpp" />
+    <ClCompile Include="..\Classes\BasketballObjects\BOBasket.cpp" />
     <ClCompile Include="..\Classes\BasketballObjects\BObject.cpp" />
     <ClCompile Include="..\Classes\BasketballObjects\BOGrid.cpp" />
     <ClCompile Include="..\Classes\BasketballObjects\BOMetalPlank.cpp" />
     <ClCompile Include="..\Classes\BasketballObjects\BOPlank.cpp" />
     <ClCompile Include="..\Classes\BasketballObjects\BORubberPlank.cpp" />
+    <ClCompile Include="..\Classes\BasketballObjects\BOStar.cpp" />
     <ClCompile Include="..\Classes\BasketballObjects\BOWoodenPlank.cpp" />
     <ClCompile Include="..\Classes\Scenes\BSChooseLevelScene.cpp" />
     <ClCompile Include="..\Classes\Scenes\BSGameScene.cpp" />
@@ -158,16 +160,19 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\BasketballObjects\BOBall.h" />
+    <ClInclude Include="..\Classes\BasketballObjects\BOBasket.h" />
     <ClInclude Include="..\Classes\BasketballObjects\BObject.h" />
     <ClInclude Include="..\Classes\BasketballObjects\BOGrid.h" />
     <ClInclude Include="..\Classes\BasketballObjects\BOMetalPlank.h" />
     <ClInclude Include="..\Classes\BasketballObjects\BOPlank.h" />
     <ClInclude Include="..\Classes\BasketballObjects\BORubberPlank.h" />
+    <ClInclude Include="..\Classes\BasketballObjects\BOStar.h" />
     <ClInclude Include="..\Classes\BasketballObjects\BOWoodenPlank.h" />
     <ClInclude Include="..\Classes\Definitions\DefForBall.h" />
     <ClInclude Include="..\Classes\Definitions\DefForGrid.h" />
     <ClInclude Include="..\Classes\Definitions\DefForPlanks.h" />
     <ClInclude Include="..\Classes\Definitions\DefForScenes.h" />
+    <ClInclude Include="..\Classes\Definitions\DefForStar.h" />
     <ClInclude Include="..\Classes\Definitions\Definitions.h" />
     <ClInclude Include="..\Classes\Scenes\BSChooseLevelScene.h" />
     <ClInclude Include="..\Classes\Scenes\BSGameScene.h" />

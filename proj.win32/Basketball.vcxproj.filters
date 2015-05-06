@@ -69,6 +69,12 @@
     <ClCompile Include="..\Classes\Temp\tempScene.cpp">
       <Filter>TempScens</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\BasketballObjects\BOStar.cpp">
+      <Filter>BasketballObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BasketballObjects\BOBasket.cpp">
+      <Filter>BasketballObjects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -129,6 +135,15 @@
       <Filter>Definitions</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Definitions\Definitions.h">
+      <Filter>Definitions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BasketballObjects\BOStar.h">
+      <Filter>BasketballObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BasketballObjects\BOBasket.h">
+      <Filter>BasketballObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Definitions\DefForStar.h">
       <Filter>Definitions</Filter>
     </ClInclude>
   </ItemGroup>

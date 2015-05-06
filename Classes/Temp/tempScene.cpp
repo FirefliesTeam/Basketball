@@ -1,8 +1,6 @@
-#include "..\Definitions\Definitions.h"
+#include "../Definitions/DefForScenes.h"
 #include "tempScene.h"
-//#include "BSMainScene.h"
-
-#define BACKGROUND_MAIN_SCENE "background_2.png"
+#include "../Scenes/BSMainScene.h"
 
 USING_NS_CC;
 
@@ -34,37 +32,24 @@ bool TempScene::init()
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
-    auto sprite = Sprite::create(BACKGROUND_MAIN_SCENE);
+    auto sprite = Sprite::create(BACKGROUND_GAME_SCENE);
     sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
     this->addChild(sprite, 0);
     
-    std::vector<MenuItemFont*> menu_items;
-    menu_items.push_back(MenuItemFont::create("New game", CC_CALLBACK_1(TempScene::GoBack, this)));
+    
+    auto menu_item = MenuItemFont::create("Go Back", CC_CALLBACK_1(TempScene::GoBack, this));
+    menu_item->setPosition(Point(visibleSize.width - menu_item->getContentSize().width / 2 + origin.x - 10, visibleSize.height - menu_item->getContentSize().height + origin.y + 20));
 
-	//Vasya comment
-    //auto menu_item_1 = MenuItemFont::create("New game", CC_CALLBACK_1(MainScene::newGame, this));
-    //auto menu_item_2 = MenuItemFont::create("Choose level",CC_CALLBACK_1(MainScene::chooseLevel, this));
-    //auto menu_item_3 = MenuItemFont::create("Setting",CC_CALLBACK_1(MainScene::setting, this));
-    //auto menu_item_4 = MenuItemFont::create("Exit",CC_CALLBACK_1(MainScene::menuCloseCallback, this));
+    auto menu =  Menu::create();
+	menu->addChild(menu_item, 1);
+    menu->setPosition(Point::ZERO);
 
-    //auto main_menu =  Menu::create(menu_item_1, menu_item_2, menu_item_3, menu_item_4, NULL);
-
-    for(int i = 0; i < menu_items.size(); ++i) {
-        menu_items[i]->setPosition(Point(visibleSize.width / 2 + origin.x, visibleSize.height / (menu_items.size() + 1) * (menu_items.size() - i) + origin.y));
-    }
-
-    auto main_menu =  Menu::create();
-    for(size_t i = 0; i < menu_items.size(); ++i) {
-	    main_menu->addChild(menu_items[i], 1);
-    }
-    //main_menu->alignItemsVertically();
-    main_menu->setPosition(Point::ZERO);
-
-    this->addChild(main_menu, 1);
+    this->addChild(menu, 1);
 
     return true;
 }
 
 void TempScene::GoBack(cocos2d::Ref* sender) {
-
+    auto main_scene = MainScene::createScene();
+    Director::getInstance()->replaceScene(TransitionFade::create(TRANSITION_TIME, main_scene));
 }
