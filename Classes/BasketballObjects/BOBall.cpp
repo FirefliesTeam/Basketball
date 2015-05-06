@@ -101,7 +101,11 @@ void BBall::launch(cocos2d::Touch *touch) {
 	if (!is_flying) {
 		body -> setGravityEnable(true);
 		Vec2 impulse_vector = touch -> getStartLocationInView() - touch -> getLocation();
-		body -> applyImpulse(impulse_vector * IMPULSE_VECTOR_IMPULSE_RATIO);
+		if (impulse_vector < Vec2(MAX_IMPULSE)) {
+			body -> applyImpulse(impulse_vector * IMPULSE_VECTOR_RATIO);
+		} else {
+			body -> applyImpulse(Vec2(MAX_IMPULSE) * IMPULSE_VECTOR_RATIO);
+		}
 		is_flying = true;
 		Director::getInstance() -> getRunningScene() -> removeChildByTag(IMPULSE_VECTOR_TAG);
 	}
