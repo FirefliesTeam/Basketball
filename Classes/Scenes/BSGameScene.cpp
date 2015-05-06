@@ -72,13 +72,7 @@ void GameScene::edgeBoxInit() {
 }
 
 void GameScene::setEventListeners(BBall *ball) {
-	//auto touch_listener = EventListenerTouchOneByOne::create();
-	//touch_listener -> setSwallowTouches(true);
-	//touch_listener -> onTouchBegan = CC_CALLBACK_2(BBall::TstartLaunching, ball);
-	
-	//auto touch_listener = EventListenerMouse::create();
-	//touch_listener -> onMouseDown = CC_CALLBACK_1(BBall::startLaunching, ball);
-	//Director::getInstance() -> getEventDispatcher() -> addEventListenerWithSceneGraphPriority(touch_listener, this);
+
 	auto touch_listener = EventListenerTouchOneByOne::create();
 	touch_listener -> setSwallowTouches(true);
 	touch_listener -> onTouchBegan = CC_CALLBACK_2(GameScene::startBallLaunching, this);
