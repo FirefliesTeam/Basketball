@@ -1,16 +1,20 @@
 #include "../Definitions/DefForScenes.h"
 #include "tempScene.h"
 #include "../Scenes/BSMainScene.h"
+#include "../SonarSystemsBodyParser/SonarSystemsBodyParser.h"
+#include "../BasketballObjects/BOStar.h"
 
 USING_NS_CC;
 
 Scene* TempScene::createScene()
 {
     // 'scene' is an autorelease object
-    auto scene = Scene::create();
+    auto scene = Scene::createWithPhysics();
+    scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
     
     // 'layer' is an autorelease object
     auto layer = TempScene::create();
+    layer->setPhysicsWorld(scene->getPhysicsWorld());
 
     // add layer as a child to scene
     scene->addChild(layer);
@@ -45,6 +49,34 @@ bool TempScene::init()
     menu->setPosition(Point::ZERO);
 
     this->addChild(menu, 1);
+
+    //auto temp_star = Sprite::create("star.png");
+    //temp_star->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
+
+    //this->addChild(temp_star);
+
+        auto edge_body = PhysicsBody::createEdgeBox(visibleSize, PHYSICSBODY_MATERIAL_DEFAULT, 3);
+    
+        auto edge_node = Node::create();
+        edge_node->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
+        edge_node->setPhysicsBody(edge_body);
+
+        this->addChild(edge_node);
+
+    //SonarSysBodyParser::getInstance()->parseJsonFile("star.json");
+
+    //auto json_sprite = Sprite::create("star.png");
+    //json_sprite->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
+
+    //auto json_sprite_body = SonarSysBodyParser::getInstance()->bodyFormJson(json_sprite, "star", PhysicsMaterial(1, 1, 0));
+    //json_sprite_body->setDynamic(true);
+    //
+    //json_sprite->setPhysicsBody(json_sprite_body);
+
+    //this->addChild(json_sprite);
+ 
+    BStar* star = new BStar(this);
+    star->setPosition(Vec2(200 + origin.x, 200 + origin.y));
 
     return true;
 }

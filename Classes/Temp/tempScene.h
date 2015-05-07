@@ -19,6 +19,13 @@ public:
     CREATE_FUNC(TempScene);
 
     void GoBack(cocos2d::Ref *sender);
+
+private:
+
+    cocos2d::PhysicsWorld* _world;
+
+    void setPhysicsWorld(cocos2d::PhysicsWorld* world) { _world = world; }
+
 };
 
 #endif // __TEMP_SCENE_H__

@@ -2,13 +2,18 @@
 #define __STAR_OBJECT_H__
 
 #include "cocos2d.h"
-#include "../BasketballObjects/BObject.h"
+#include "BObject.h"
 
 class BStar: public BObject {
 public:
-    void Remove();
-protected:
-    
+    BStar(cocos2d::Layer* layer);
+    ~BStar();
+    void setPosition(cocos2d::Vec2 coord);
+    void create();
+    void Remove(); 
+
+    void setPosition() {}
+
 };
 
 #endif // __STAR_OBJECT_H__

@@ -52,6 +52,9 @@
     <ClCompile Include="..\Classes\BasketballObjects\BOWoodenPlank.cpp">
       <Filter>Objects</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\SonarSystemsBodyParser\SonarSystemsBodyParser.cpp">
+      <Filter>qwerty</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -126,6 +129,39 @@
     <ClInclude Include="..\Classes\BasketballObjects\BOStar.h">
       <Filter>Objects</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\SonarSystemsBodyParser\json\document.h">
+      <Filter>qwerty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SonarSystemsBodyParser\json\filestream.h">
+      <Filter>qwerty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SonarSystemsBodyParser\json\internal\pow10.h">
+      <Filter>qwerty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SonarSystemsBodyParser\json\internal\stack.h">
+      <Filter>qwerty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SonarSystemsBodyParser\json\internal\strfunc.h">
+      <Filter>qwerty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SonarSystemsBodyParser\json\prettywriter.h">
+      <Filter>qwerty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SonarSystemsBodyParser\json\rapidjson.h">
+      <Filter>qwerty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SonarSystemsBodyParser\json\reader.h">
+      <Filter>qwerty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SonarSystemsBodyParser\json\stringbuffer.h">
+      <Filter>qwerty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SonarSystemsBodyParser\json\writer.h">
+      <Filter>qwerty</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SonarSystemsBodyParser\SonarSystemsBodyParser.h">
+      <Filter>qwerty</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="resource">
@@ -146,10 +182,21 @@
     <Filter Include="Objects">
       <UniqueIdentifier>{83fade34-ff58-4bf3-936f-b6aa3f487f44}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Диаграммы классов">
+      <UniqueIdentifier>{16bc0872-ac11-45ae-a324-c6532a64811a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qwerty">
+      <UniqueIdentifier>{cef40790-61be-4488-ab6d-9360e4337491}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">
       <Filter>resource</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\ClassDiagram\ClassDiagram.cd">
+      <Filter>Диаграммы классов</Filter>
+    </None>
   </ItemGroup>
 </Project>

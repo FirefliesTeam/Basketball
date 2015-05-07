@@ -154,6 +154,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
     <ClCompile Include="..\Classes\Scenes\BSMainScene.cpp" />
     <ClCompile Include="..\Classes\Scenes\BSSettingScene.cpp" />
     <ClCompile Include="..\Classes\Scenes\BSSplashScene.cpp" />
+    <ClCompile Include="..\Classes\SonarSystemsBodyParser\SonarSystemsBodyParser.cpp" />
     <ClCompile Include="..\Classes\Temp\tempScene.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -180,6 +181,17 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
     <ClInclude Include="..\Classes\Scenes\BSMainScene.h" />
     <ClInclude Include="..\Classes\Scenes\BSSettingScene.h" />
     <ClInclude Include="..\Classes\Scenes\BSSplashScene.h" />
+    <ClInclude Include="..\Classes\SonarSystemsBodyParser\json\document.h" />
+    <ClInclude Include="..\Classes\SonarSystemsBodyParser\json\filestream.h" />
+    <ClInclude Include="..\Classes\SonarSystemsBodyParser\json\internal\pow10.h" />
+    <ClInclude Include="..\Classes\SonarSystemsBodyParser\json\internal\stack.h" />
+    <ClInclude Include="..\Classes\SonarSystemsBodyParser\json\internal\strfunc.h" />
+    <ClInclude Include="..\Classes\SonarSystemsBodyParser\json\prettywriter.h" />
+    <ClInclude Include="..\Classes\SonarSystemsBodyParser\json\rapidjson.h" />
+    <ClInclude Include="..\Classes\SonarSystemsBodyParser\json\reader.h" />
+    <ClInclude Include="..\Classes\SonarSystemsBodyParser\json\stringbuffer.h" />
+    <ClInclude Include="..\Classes\SonarSystemsBodyParser\json\writer.h" />
+    <ClInclude Include="..\Classes\SonarSystemsBodyParser\SonarSystemsBodyParser.h" />
     <ClInclude Include="..\Classes\Temp\tempScene.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
@@ -197,6 +209,9 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\ClassDiagram\ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
