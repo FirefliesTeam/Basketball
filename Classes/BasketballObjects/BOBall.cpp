@@ -2,22 +2,26 @@
 #include "../Definitions/DefForBall.h"
 #include "../Definitions/DefForSriteTags.h"
 #include <math.h>
+#include "cocos2d.h"
 
 USING_NS_CC;
 
-BBall::BBall(Layer *layer) : BObject() {
-
+BBall::BBall(Layer *layer, Vec2 position) : BObject() {
 	bitmask = BALL_COLLISION_BITMASK;
 	material = PhysicsMaterial::PhysicsMaterial(BALL_DENSITY, BALL_RESTITUTION, BALL_FRICTION);
 	sprite = Sprite::create("ball_sprite.png");
 	body = PhysicsBody::createCircle(sprite->getContentSize().width/2, material);
 	body -> setGravityEnable(false);
 	sprite -> setPhysicsBody(body);
-	sprite -> setPosition(Vec2(visible_size.width/2 + origin.x, visible_size.height/2 + origin.y));
+	sprite -> setPosition(position);
 	layer -> addChild(sprite, 0);
 	is_flying = false;
-
 }
+
+void BBall::setPosition(cocos2d::Vec2 position) {
+	sprite -> setPosition(position);
+}
+
 
 float BBall::getLaunchingRotation(Vec2& start_touch_position, Vec2& current_touch_position) {
 	float rotate_angle = (current_touch_position - start_touch_position).getAngle();

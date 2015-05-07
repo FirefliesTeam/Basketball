@@ -42,7 +42,7 @@ bool GameScene::init()
     this->addChild(sprite, 0);
 
 	
-	ball = new BBall(this);
+	ball = new BBall(this, Vec2(visibleSize.width/10, visibleSize.height/5 + origin.y));
 	this -> edgeBoxInit();
 	this -> setEventListeners(ball);
 	
