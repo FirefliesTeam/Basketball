@@ -11,7 +11,7 @@ class BBall : public BObject
 		BBall(cocos2d::Layer *layer, cocos2d::Vec2 position);
 		~BBall();
 
-		void setPosition(cocos2d::Vec2 position){};
+		void setPosition(cocos2d::Vec2 position);
 		void startLaunching(cocos2d::Touch *touch);
 		void setImpulse(cocos2d::Touch *touch);
 		void launch(cocos2d::Touch *touch);
