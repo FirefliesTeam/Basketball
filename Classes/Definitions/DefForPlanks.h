@@ -20,6 +20,7 @@
 #define SMALL_PLANK 0.5
 #define NORMAL_PLANK 1
 #define BIG_PLANK 1.5
+
 ////Определить еще для остальных досок
 #define WODDEN_PLANK "woddy plank.png"
 #define METAL_PLANK "metal plank.png"

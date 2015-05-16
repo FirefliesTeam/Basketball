@@ -26,6 +26,10 @@ private:
 
     void setPhysicsWorld(cocos2d::PhysicsWorld* world) { _world = world; }
 
+    bool onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event);
+    void onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event);
+	void onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event);
+
 };
 
 #endif // __TEMP_SCENE_H__

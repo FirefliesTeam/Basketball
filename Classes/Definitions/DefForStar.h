@@ -7,4 +7,8 @@
 #define STAR_PLANK_RESTITUTION 0
 #define STAR_PALNK_FRICTION 0
 
+#define STAR_JSON_FILE "star.json"
+#define STAR_NAME_OBJECT_IN_JSON "star"
+#define STAR_SPRITE "star.png"
+
 #endif // __DEF_FOR_STAR_H__

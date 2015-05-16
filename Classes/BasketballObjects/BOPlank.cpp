@@ -21,8 +21,11 @@ void BPlank::setPosition(cocos2d::Vec2 coord) {
 }
 
 void BPlank::Rotate(float angl) {
-    _rotate_angle += angl;
-    sprite->runAction(RotateBy::create(PLANK_ROTATE_TIME, _rotate_angle));
+    //_rotate_angle += angl;
+    //sprite->runAction(RotateBy::create(PLANK_ROTATE_TIME, _rotate_angle));
+    _rotate_angle = angl;
+    //sprite->runAction(RotateTo::create(PLANK_ROTATE_TIME, _rotate_angle));
+    //sprite->setRotation(angl);
 }
 
 void BPlank::setOpacity(float opacity) {

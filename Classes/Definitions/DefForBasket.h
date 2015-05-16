@@ -1,0 +1,14 @@
+#ifndef __DEF_FOR_BASKET_H__
+#define __DEF_FOR_BASKET_H__
+
+#define BASKET_COLLISION_BITMASK 0x000007
+
+#define BASKET_PLANK_DENSITY 0
+#define BASKET_PLANK_RESTITUTION 1
+#define BASKET_PALNK_FRICTION 0
+
+#define BASKET_JSON_FILE "obj.json"
+#define BASKET_NAME_OBJECT_IN_JSON "basket"
+#define BASKET_SPRITE "basket.png"
+
+#endif // __DEF_FOR_BASKET_H__

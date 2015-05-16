@@ -170,6 +170,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
     <ClInclude Include="..\Classes\BasketballObjects\BOStar.h" />
     <ClInclude Include="..\Classes\BasketballObjects\BOWoodenPlank.h" />
     <ClInclude Include="..\Classes\Definitions\DefForBall.h" />
+    <ClInclude Include="..\Classes\Definitions\DefForBasket.h" />
     <ClInclude Include="..\Classes\Definitions\DefForGrid.h" />
     <ClInclude Include="..\Classes\Definitions\DefForPlanks.h" />
     <ClInclude Include="..\Classes\Definitions\DefForScenes.h" />

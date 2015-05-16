@@ -162,6 +162,9 @@
     <ClInclude Include="..\Classes\SonarSystemsBodyParser\SonarSystemsBodyParser.h">
       <Filter>qwerty</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\Definitions\DefForBasket.h">
+      <Filter>Definitions</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="resource">
