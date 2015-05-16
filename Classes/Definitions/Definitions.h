@@ -1,6 +1,8 @@
 #ifndef __DEFINITIONS_H__
 #define __DEFINITIONS_H__
 
+#define aefawfe 45
+
 //#define PIPE_SPAWN_FREQUENCY 0.003
 //
 //#define PIPE_GAP 10
