@@ -1,3 +1,5 @@
+#include <iostream>
+#include <fstream>
 #include "BOPlank.h"
 #include "../Definitions/DefForPlanks.h"
 
@@ -13,7 +15,7 @@ BPlank::BPlank(int cost, float scale) {
 }
 
 BPlank::~BPlank() {
-    
+
 }
 
 void BPlank::setPosition(cocos2d::Vec2 coord) {
@@ -30,4 +32,18 @@ void BPlank::Rotate(float angl) {
 
 void BPlank::setOpacity(float opacity) {
     sprite->setOpacity(opacity);
+}
+
+void BPlank::serialize(std::ofstream& file){
+	//file << DESIGNATION_PLANK << _scale << " " << _cost << " " << _rotate_angle << std::endl;
+}
+
+void BPlank::deserialize(std::ifstream& file){
+	int x = 0;
+	int y = 0;
+	float angle = 0;
+	_rotate_angle = 0;
+	file >> _scale >> _cost >> angle >> x >> y;
+	setPosition(Vec2(x, y));
+	BPlank::Rotate(angle);
 }

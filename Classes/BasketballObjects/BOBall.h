@@ -21,7 +21,10 @@ class BBall : public BObject
 		bool onContactBegin();
 		float getLaunchingRotation(cocos2d::Point&, cocos2d::Point&);
 
-	private:
+		virtual void serialize(std::ofstream&);
+		virtual void deserialize(std::ifstream&);
+
+    private:
 		cocos2d::Vec2	velocity;
 		cocos2d::Vec2	acceleration;
 		bool			is_flying;

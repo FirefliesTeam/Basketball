@@ -1,3 +1,5 @@
+#include <iostream>
+#include <fstream>
 #include "BOBall.h"
 #include "../Definitions/DefForBall.h"
 #include "../Definitions/DefForSriteTags.h"
@@ -34,7 +36,7 @@ void  BBall::startLaunching(cocos2d::Touch *touch) {
 	if (!is_flying) {
 		Vec2 current_touch_position = touch -> getLocationInView();
 		Vec2 start_touch_position = touch -> getStartLocationInView();
-		
+
 		auto impulse_vector = Sprite::create("arrow_sprite.png");
 		impulse_vector -> setPosition(this -> sprite -> getPosition());
 		impulse_vector -> setAnchorPoint(Vec2(0.5,1));
@@ -75,3 +77,17 @@ BBall::~BBall() {
 
 }
 
+void BBall::serialize(std::ofstream& file){
+	//file << 'b' << std::endl;
+}
+
+void BBall::deserialize(std::ifstream& file){
+	int x = 0;
+	int y = 0;
+
+	velocity = cocos2d::Vec2(0, 0);
+	acceleration = cocos2d::Vec2(0, 0);
+	is_flying = false;
+	file >> x >> y;
+	setPosition(Vec2(x, y));
+}

@@ -156,6 +156,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
     <ClCompile Include="..\Classes\Scenes\BSSplashScene.cpp" />
     <ClCompile Include="..\Classes\SonarSystemsBodyParser\SonarSystemsBodyParser.cpp" />
     <ClCompile Include="..\Classes\Temp\tempScene.cpp" />
+    <ClCompile Include="..\Classes\Temp\tempScene2.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -194,6 +195,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
     <ClInclude Include="..\Classes\SonarSystemsBodyParser\json\writer.h" />
     <ClInclude Include="..\Classes\SonarSystemsBodyParser\SonarSystemsBodyParser.h" />
     <ClInclude Include="..\Classes\Temp\tempScene.h" />
+    <ClInclude Include="..\Classes\Temp\tempScene2.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>

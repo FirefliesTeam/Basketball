@@ -15,7 +15,8 @@ public:
     void setPosition(cocos2d::Vec2 position); //названия переменных не должны содержать сокращения coor -> position
     void Rotate(float angl);
     void onContactBegin();     /////// Не описан
-
+	virtual void serialize(std::ofstream&);
+	virtual void deserialize(std::ifstream&);
 protected:
     float _scale;
     int _cost;

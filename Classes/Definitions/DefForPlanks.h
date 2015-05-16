@@ -7,9 +7,9 @@
 #define WOODEN_PLANK_RESTITUTION 0.1
 #define WOODEN_PLANK_FRICTION 0.1
 
-#define METAL_PLANK_DENSITY 0.1
-#define METAL_PLANK_RESTITUTION 0.1
-#define METAL_PALNK_FRICTION 0.1
+#define METAL_PLANK_DENSITY 0
+#define METAL_PLANK_RESTITUTION 0
+#define METAL_PALNK_FRICTION 0
 
 #define RUBBER_PLANK_DENSITY 0.1
 #define RUBBER_PLANK_RESTIITUTION 0.1
@@ -25,5 +25,7 @@
 #define WODDEN_PLANK "woddy plank.png"
 #define METAL_PLANK "metal plank.png"
 #define RUBBER_PLANK "rubber plank.png"
+
+#define DESIGNATION_PLANK 'p'
 
 #endif // __DEF_FOR_PLANKS_H__

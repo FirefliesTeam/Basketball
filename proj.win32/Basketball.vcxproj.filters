@@ -55,6 +55,9 @@
     <ClCompile Include="..\Classes\SonarSystemsBodyParser\SonarSystemsBodyParser.cpp">
       <Filter>qwerty</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\Temp\tempScene2.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -164,6 +167,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\Definitions\DefForBasket.h">
       <Filter>Definitions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Temp\tempScene2.h">
+      <Filter>Scenes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

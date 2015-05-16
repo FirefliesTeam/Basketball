@@ -8,7 +8,8 @@ class BObject
 	public:
 		BObject();
 		~BObject();
-		virtual void setPosition(cocos2d::Vec2 position) = 0;
+		virtual void serialize(std::ofstream&){};
+		virtual void deserialize(std::ifstream&){};
 	protected:
 		//»нициализируютс€ в конструкторе базового класса
 		cocos2d::Size				visible_size;

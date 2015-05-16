@@ -4,6 +4,7 @@
 #include "BSSettingScene.h"
 #include "../Definitions/DefForScenes.h"
 #include "../Temp/tempScene.h"
+#include "../Temp/tempScene2.h"
 
 USING_NS_CC;
 
@@ -71,6 +72,12 @@ bool MainScene::init()
     main_menu->addChild(menu_item_go_to_tempScene);
     ////////////////////////////
 
+	//////////////////////////// GO TO tempScene2
+	auto menu_item_go_to_tempScene2 = MenuItemFont::create("TempScene2", CC_CALLBACK_1(MainScene::GoToTempScene2, this));
+	menu_item_go_to_tempScene2->setPosition(Point(visibleSize.width / 4 + origin.x, visibleSize.height / 5 * 3 + origin.y));
+	main_menu->addChild(menu_item_go_to_tempScene2);
+	////////////////////////////
+
     this->addChild(main_menu, 1);
 
     return true;
@@ -109,5 +116,10 @@ void MainScene::menuCloseCallback(Ref* pSender)
 void MainScene::GoToTempScene(cocos2d::Ref *sender) {
     auto temp_scene = TempScene::createScene();
     Director::getInstance()->replaceScene(TransitionFade::create(TRANSITION_TIME, temp_scene));
+}
+
+void MainScene::GoToTempScene2(cocos2d::Ref *sender) {
+	auto temp_scene = TempScene2::createScene();
+	Director::getInstance()->replaceScene(TransitionFade::create(TRANSITION_TIME, temp_scene));
 }
 /////////////////////////////////

@@ -24,6 +24,7 @@ public:
 
     ////////////////////////// GO TO tempScene
     void GoToTempScene(cocos2d::Ref *sender);
+	void GoToTempScene2(cocos2d::Ref *sender);
     /////////////////////////
 };
 
