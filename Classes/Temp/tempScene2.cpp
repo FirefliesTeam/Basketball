@@ -50,7 +50,7 @@ bool TempScene2::init()
 	this->setEventListeners(ball);
 
 	std::ifstream fileS;
-	fileS.open("serialization_file.txt");
+	fileS.open("seralization.txt");
 	char typeObj;
 	BObject *obj = NULL;
 	while (fileS >> typeObj){
