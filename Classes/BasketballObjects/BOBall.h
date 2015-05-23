@@ -24,11 +24,15 @@ class BBall : public BObject
 		void serialize(std::ofstream&);
 		void deserialize(std::ifstream&);
 
+
+    private:
+		float			getLaunchingRotation(cocos2d::Point&, cocos2d::Point&);
+
     private:
 		cocos2d::Vec2	velocity;
 		cocos2d::Vec2	acceleration;
 		bool			is_flying;
-		float			getLaunchingRotation(cocos2d::Point&, cocos2d::Point&);
+    
 };
 
 

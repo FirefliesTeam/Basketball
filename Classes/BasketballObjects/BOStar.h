@@ -15,6 +15,9 @@ public:
 
     //void setPosition() {}
 
+    void serialize(std::ofstream&){};
+	void deserialize(std::ifstream&){};
+
 };
 
 #endif // __STAR_OBJECT_H__

@@ -3,13 +3,15 @@
 
 #include "cocos2d.h"
 
+// почему нет чистого виртуального метода setPosition??????
+
 class BObject
 {
 	public:
 		BObject();
 		~BObject();
-		virtual void serialize(std::ofstream&){};
-		virtual void deserialize(std::ifstream&){};
+		virtual void serialize(std::ofstream&) = 0;
+		virtual void deserialize(std::ifstream&) = 0;
 	protected:
 		//»нициализируютс€ в конструкторе базового класса
 		cocos2d::Size				visible_size;

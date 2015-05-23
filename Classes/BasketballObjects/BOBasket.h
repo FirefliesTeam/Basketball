@@ -10,6 +10,8 @@ public:
     ~BBasket();
 
     void setPosition(cocos2d::Vec2 coord);
+    void serialize(std::ofstream&){};
+	void deserialize(std::ifstream&){};
 
 };
 
