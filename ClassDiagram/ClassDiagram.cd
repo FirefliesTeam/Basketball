@@ -3,57 +3,43 @@
   <Class Name="BObject">
     <Position X="5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAAAAAQgAAAAAAAAEAIAAAACARAAAAAAAAAAAABAAAA=</HashCode>
-      <FileName>D:\TechnoPark\GitHub\Basketball\Classes\BasketballObjects\BObject.h</FileName>
+      <HashCode>CAAAAAQgAAAAAAAAEAIAIAAAARAAAAAAQAAAAABAAAA=</HashCode>
+      <FileName>H:\Basketball_\Basketball\Classes\BasketballObjects\BObject.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BBall">
     <Position X="7.25" Y="0.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AABAAIQAAAAAAAAAAAARAAACQCAAAAQAAAQGAAAAAQA=</HashCode>
-      <FileName>D:\TechnoPark\GitHub\Basketball\Classes\BasketballObjects\BOBall.h</FileName>
+      <HashCode>AABAAIQAAAAAAAAAAAARIAACQCAAAAQAQAQGAAAAAAA=</HashCode>
+      <FileName>H:\Basketball_\Basketball\Classes\BasketballObjects\BOBall.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BGrid">
     <Position X="10.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>DAAAAAAgIAAAEgAAAAAABAAAAAAAAAAAAAAAAACAAgE=</HashCode>
-      <FileName>D:\TechnoPark\GitHub\Basketball\Classes\BasketballObjects\BOGrid.h</FileName>
+      <FileName>H:\Basketball_\Basketball\Classes\BasketballObjects\BOGrid.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BPlank">
     <Position X="5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAACAAAAAAAAABAAACEAAAICAAAQAABAAAACA=</HashCode>
-      <FileName>D:\TechnoPark\GitHub\Basketball\Classes\BasketballObjects\BOPlank.h</FileName>
+      <HashCode>AAAAAEAAACAAAAAAAAABIAACEAAAICAAQQAABAAAACA=</HashCode>
+      <FileName>H:\Basketball_\Basketball\Classes\BasketballObjects\BOPlank.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BRubberPlank" Collapsed="true">
-    <Position X="7.5" Y="5.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>D:\TechnoPark\GitHub\Basketball\Classes\BasketballObjects\BORubberPlank.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="BWoodenPlank" Collapsed="true">
-    <Position X="7.5" Y="4.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
-      <FileName>D:\TechnoPark\GitHub\Basketball\Classes\BasketballObjects\BOWoodenPlank.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="BMetalPlank" Collapsed="true">
-    <Position X="7.5" Y="6.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIBAAAAAAAAAAAAA=</HashCode>
-      <FileName>D:\TechnoPark\GitHub\Basketball\Classes\BasketballObjects\BOMetalPlank.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="BStar" Collapsed="true">
+  <Class Name="BStar">
     <Position X="1.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>D:\TechnoPark\GitHub\Basketball\Classes\BasketballObjects\BOStar.h</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAACAAAAAAAAQ=</HashCode>
+      <FileName>H:\Basketball_\Basketball\Classes\BasketballObjects\BOStar.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BBasket">
+    <Position X="1.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAgAAABAAAAA=</HashCode>
+      <FileName>H:\Basketball_\Basketball\Classes\BasketballObjects\BOBasket.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

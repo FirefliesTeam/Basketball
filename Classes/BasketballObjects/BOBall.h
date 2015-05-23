@@ -17,18 +17,18 @@ class BBall : public BObject
 		void launch(cocos2d::Touch *touch);
 
 		bool isFlying();
-		void fly();
+		//void fly();
 		bool onContactBegin();
-		float getLaunchingRotation(cocos2d::Point&, cocos2d::Point&);
+		
 
-		virtual void serialize(std::ofstream&);
-		virtual void deserialize(std::ifstream&);
+		void serialize(std::ofstream&);
+		void deserialize(std::ifstream&);
 
     private:
 		cocos2d::Vec2	velocity;
 		cocos2d::Vec2	acceleration;
 		bool			is_flying;
-
+		float			getLaunchingRotation(cocos2d::Point&, cocos2d::Point&);
 };
 
 

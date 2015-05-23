@@ -87,7 +87,7 @@ void BBall::deserialize(std::ifstream& file){
 
 	velocity = cocos2d::Vec2(0, 0);
 	acceleration = cocos2d::Vec2(0, 0);
-	is_flying = false;
+	//is_flying = false;
 	file >> x >> y;
 	setPosition(Vec2(x, y));
 }
