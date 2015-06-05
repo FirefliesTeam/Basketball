@@ -7,7 +7,7 @@
 class BPlank: public BObject {
 public:
     BPlank(int cost, float scale);
-	BPlank(int cost, float scale, cocos2d::PhysicsMaterial material); // новый конструктор для создания планки определенного вида 
+	BPlank(int cost, float scale, cocos2d::PhysicsMaterial material, std::string sprite_type); // новый конструктор для создания планки определенного вида 
     ~BPlank();
 
     static int value;

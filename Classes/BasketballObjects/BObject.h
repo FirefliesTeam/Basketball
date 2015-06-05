@@ -12,6 +12,7 @@ class BObject
 		~BObject();
 		virtual void serialize(std::ofstream&) = 0;
 		virtual void deserialize(std::ifstream&) = 0;
+		cocos2d::Sprite* getSprite() { return sprite; }
 	protected:
 		//»нициализируютс€ в конструкторе базового класса
 		cocos2d::Size				visible_size;

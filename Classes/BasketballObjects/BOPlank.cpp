@@ -14,8 +14,8 @@ BPlank::BPlank(int cost, float scale) {
     bitmask = PLANK_COLLITION_BITMASK;
 }
 
-BPlank::BPlank(int cost, float scale, PhysicsMaterial material) {
-	sprite = Sprite::create(RUBBER_PLANK);
+BPlank::BPlank(int cost, float scale, PhysicsMaterial material, std::string type) {
+	sprite = Sprite::create(type);
     sprite->setScaleX(scale);
     body = PhysicsBody::createBox(Size(sprite->getContentSize().width * scale, sprite->getContentSize().height), material);
     body->setDynamic(false);
