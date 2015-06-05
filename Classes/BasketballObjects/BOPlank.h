@@ -7,14 +7,15 @@
 class BPlank: public BObject {
 public:
     BPlank(int cost, float scale);
+	BPlank(int cost, float scale, cocos2d::PhysicsMaterial material); // новый конструктор для создания планки определенного вида 
     ~BPlank();
 
     static int value;
 
     void setOpacity(float opacity);
-    void setPosition(cocos2d::Vec2 position); //названия переменных не должны содержать сокращения coor -> position
+    void setPosition(cocos2d::Vec2 position); 
     void Rotate(float angl);
-    void onContactBegin();     /////// Не описан
+    void onContactBegin(); // Не описан
 	virtual void serialize(std::ofstream&);
 	virtual void deserialize(std::ifstream&);
 protected:
