@@ -4,7 +4,7 @@
 USING_NS_CC;
 
 BWoodenPlank::BWoodenPlank(int cost, int priority, float scale, cocos2d::Layer *layer): BPlank(cost, scale) {
-    sprite = Sprite::create(WODDEN_PLANK);
+    sprite = Sprite::create(WOODEN_PLANK);
     sprite->setScaleX(scale);
     material = PhysicsMaterial(WOODEN_PLANK_DENSITY, WOODEN_PLANK_RESTITUTION, WOODEN_PLANK_FRICTION);
 

@@ -25,7 +25,7 @@
 #define METALL_PLANK_COST 2
 #define WOODEN_PLANK_COST 1
 
-#define WODDEN_PLANK "woddy plank.png"
+#define WOODEN_PLANK "woddy plank.png"
 #define METAL_PLANK "metal plank.png"
 #define RUBBER_PLANK "rubber plank.png"
 

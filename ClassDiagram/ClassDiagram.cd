@@ -31,15 +31,29 @@
   <Class Name="BStar">
     <Position X="1.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAACAAAAAAAAQ=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAACAAAAAAAAQCAAAAAAAAQ=</HashCode>
       <FileName>H:\Basketball_\Basketball\Classes\BasketballObjects\BOStar.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BBasket">
     <Position X="1.75" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAgAAABAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAACAAAAAAAAQgAAABAAAAA=</HashCode>
       <FileName>H:\Basketball_\Basketball\Classes\BasketballObjects\BOBasket.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IPlankFactory">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAACAAAgAAAAAAAAAAAAQA=</HashCode>
+      <FileName>H:\Basketball_\Basketball\Classes\PlankFactory\IPlankFactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlankFactory">
+    <Position X="12.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAACAQAABAAAAAAAAAAAQA=</HashCode>
+      <FileName>H:\Basketball_\Basketball\Classes\PlankFactory\PlankFactory.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
