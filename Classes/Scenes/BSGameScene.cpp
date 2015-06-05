@@ -2,6 +2,7 @@
 #include "BSMainScene.h"
 #include "../BasketballObjects/BOBall.h"
 #include "../Definitions/DefForScenes.h"
+#include "../PlankFactory/PlankFactory.h"
 
 USING_NS_CC;
 
@@ -45,7 +46,14 @@ bool GameScene::init()
 	ball = new BBall(this, Vec2(visibleSize.width/10, visibleSize.height/5 + origin.y));
 	this -> edgeBoxInit();
 	this -> setEventListeners();
+
+	PlankFactory plankFactory;
+	BPlank *plank = plankFactory.createWoodenPlank();
+	this -> addChild(plank -> getSprite());
+	plank -> setPosition(Vec2(visibleSize.width/2, visibleSize.height/5));
+
 	
+
     auto menu_item_1 = MenuItemFont::create("Go Back", CC_CALLBACK_1(GameScene::GoBack, this));
 
     auto menu =  Menu::create(menu_item_1, NULL);
