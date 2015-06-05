@@ -10,10 +10,10 @@
 class PlankFactory: public IPlankFactory
 {
 public:
-	PlankFactory();
-	~PlankFactory();
+	PlankFactory(){};
+	~PlankFactory(){};
 	BPlank* createMetalPlank();
-	BPlank* createWoddenPlank();
+	BPlank* createWoodenPlank();
     BPlank* createRubberPlank();
 };
 

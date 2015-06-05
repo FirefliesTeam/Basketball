@@ -11,10 +11,11 @@
 class IPlankFactory
 {
 public:
-	IPlankFactory();
+	IPlankFactory(){};
+	~IPlankFactory(){};
 	virtual BPlank* createMetalPlank() = 0;
-	virtual BPlank* createWoodenPlank();
-	virtual BPlank* createRubberPlank();
+	virtual BPlank* createWoodenPlank(){ return NULL; };
+	virtual BPlank* createRubberPlank(){ return NULL; };
     
 };
 
