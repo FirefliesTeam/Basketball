@@ -149,6 +149,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
     <ClCompile Include="..\Classes\BasketballObjects\BORubberPlank.cpp" />
     <ClCompile Include="..\Classes\BasketballObjects\BOStar.cpp" />
     <ClCompile Include="..\Classes\BasketballObjects\BOWoodenPlank.cpp" />
+    <ClCompile Include="..\Classes\PlankFactory\PlankFactory.cpp" />
     <ClCompile Include="..\Classes\Scenes\BSChooseLevelScene.cpp" />
     <ClCompile Include="..\Classes\Scenes\BSGameScene.cpp" />
     <ClCompile Include="..\Classes\Scenes\BSMainScene.cpp" />
@@ -178,6 +179,8 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
     <ClInclude Include="..\Classes\Definitions\DefForStar.h" />
     <ClInclude Include="..\Classes\Definitions\DefForSriteTags.h" />
     <ClInclude Include="..\Classes\Definitions\Definitions.h" />
+    <ClInclude Include="..\Classes\PlankFactory\IPlankFactory.h" />
+    <ClInclude Include="..\Classes\PlankFactory\PlankFactory.h" />
     <ClInclude Include="..\Classes\Scenes\BSChooseLevelScene.h" />
     <ClInclude Include="..\Classes\Scenes\BSGameScene.h" />
     <ClInclude Include="..\Classes\Scenes\BSMainScene.h" />

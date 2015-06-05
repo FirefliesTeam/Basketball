@@ -58,6 +58,9 @@
     <ClCompile Include="..\Classes\Temp\tempScene2.cpp">
       <Filter>Scenes</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\PlankFactory\PlankFactory.cpp">
+      <Filter>PlankFactory</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -171,6 +174,12 @@
     <ClInclude Include="..\Classes\Temp\tempScene2.h">
       <Filter>Scenes</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\PlankFactory\IPlankFactory.h">
+      <Filter>PlankFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PlankFactory\PlankFactory.h">
+      <Filter>PlankFactory</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="resource">
@@ -196,6 +205,9 @@
     </Filter>
     <Filter Include="qwerty">
       <UniqueIdentifier>{cef40790-61be-4488-ab6d-9360e4337491}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlankFactory">
+      <UniqueIdentifier>{f7b33ddd-2ed4-419c-947d-c41e4598d29a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
