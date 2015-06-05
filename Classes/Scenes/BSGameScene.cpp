@@ -44,7 +44,7 @@ bool GameScene::init()
 	
 	ball = new BBall(this, Vec2(visibleSize.width/10, visibleSize.height/5 + origin.y));
 	this -> edgeBoxInit();
-	this -> setEventListeners(ball);
+	this -> setEventListeners();
 	
     auto menu_item_1 = MenuItemFont::create("Go Back", CC_CALLBACK_1(GameScene::GoBack, this));
 
@@ -71,7 +71,7 @@ void GameScene::edgeBoxInit() {
 	this -> addChild(edgeNode,0);
 }
 
-void GameScene::setEventListeners(BBall *ball) {
+void GameScene::setEventListeners() {
 
 	auto touch_listener = EventListenerTouchOneByOne::create();
 	touch_listener -> setSwallowTouches(true);

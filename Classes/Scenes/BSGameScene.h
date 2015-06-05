@@ -21,7 +21,7 @@ public:
 	//initialisation of edgeBox for debuging
 	void edgeBoxInit();
 
-	void setEventListeners(BBall *ball);
+	void setEventListeners();
 
 	bool startBallLaunching(cocos2d::Touch *touch, cocos2d::Event *_event);
 	void setBallImpulse(cocos2d::Touch *touch, cocos2d::Event *_event);
