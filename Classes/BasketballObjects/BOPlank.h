@@ -18,10 +18,15 @@ public:
     void onContactBegin(); // Не описан
 	virtual void serialize(std::ofstream&);
 	virtual void deserialize(std::ifstream&);
+    
+    virtual BPlank* clone() = 0;
+
 protected:
     float _scale;
     int _cost;
     float _rotate_angle;
+    int _priority;
+
 };
 
 

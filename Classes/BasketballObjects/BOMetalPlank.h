@@ -7,7 +7,11 @@
 class BMetalPlank: public BPlank {
 public:
     BMetalPlank(int cost, int priority, float scale, cocos2d::Layer *layer);
+    BMetalPlank(int cost, int priority, float scale);
     ~BMetalPlank() {}
+    
+    BPlank* clone();   
+
 };
 
 #endif //__METAL_PLANK_H__

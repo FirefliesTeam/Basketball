@@ -3,7 +3,8 @@
 
 USING_NS_CC;
 
-BWoodenPlank::BWoodenPlank(int cost, int priority, float scale, cocos2d::Layer *layer): BPlank(cost, scale) {
+//BWoodenPlank::BWoodenPlank(int cost, int priority, float scale, cocos2d::Layer *layer): BPlank(cost, scale) {
+BWoodenPlank::BWoodenPlank(int cost, int priority, float scale): BPlank(cost, scale) {
     sprite = Sprite::create(WOODEN_PLANK);
     sprite->setScaleX(scale);
     material = PhysicsMaterial(WOODEN_PLANK_DENSITY, WOODEN_PLANK_RESTITUTION, WOODEN_PLANK_FRICTION);
@@ -15,5 +16,10 @@ BWoodenPlank::BWoodenPlank(int cost, int priority, float scale, cocos2d::Layer *
 
     sprite->setPhysicsBody(body);
 
-    layer->addChild(sprite, priority);
+    //layer->addChild(sprite, priority);
+}
+
+BPlank* BWoodenPlank::clone() {
+    BPlank* plank = new BWoodenPlank(_cost, _priority, _scale); 
+    return plank;   
 }
