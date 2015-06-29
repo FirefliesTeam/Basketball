@@ -147,6 +147,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
     <ClCompile Include="..\Classes\BasketballObjects\BOMetalPlank.cpp" />
     <ClCompile Include="..\Classes\BasketballObjects\BOPlank.cpp" />
     <ClCompile Include="..\Classes\BasketballObjects\BORubberPlank.cpp" />
+    <ClCompile Include="..\Classes\BasketballObjects\BOSingleBall.cpp" />
     <ClCompile Include="..\Classes\BasketballObjects\BOStar.cpp" />
     <ClCompile Include="..\Classes\BasketballObjects\BOWoodenPlank.cpp" />
     <ClCompile Include="..\Classes\PlankFactory\PlankFactory.cpp" />
@@ -169,6 +170,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y</Command>
     <ClInclude Include="..\Classes\BasketballObjects\BOMetalPlank.h" />
     <ClInclude Include="..\Classes\BasketballObjects\BOPlank.h" />
     <ClInclude Include="..\Classes\BasketballObjects\BORubberPlank.h" />
+    <ClInclude Include="..\Classes\BasketballObjects\BOSingleBall.h" />
     <ClInclude Include="..\Classes\BasketballObjects\BOStar.h" />
     <ClInclude Include="..\Classes\BasketballObjects\BOWoodenPlank.h" />
     <ClInclude Include="..\Classes\Definitions\DefForBall.h" />

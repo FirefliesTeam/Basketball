@@ -1,7 +1,8 @@
 #ifndef __GAME_SCENE_H__
 #define __GAME_SCENE_H__
 
-#include "BasketballObjects\BOBall.h"
+//#include "BasketballObjects\BOBall.h"
+#include "BasketballObjects\BOSingleBall.h"
 #include "cocos2d.h"
 
 class GameScene : public cocos2d::Layer
@@ -28,7 +29,7 @@ public:
 	void launchBall(cocos2d::Touch *touch, cocos2d::Event *_event);
 
 private:
-	BBall *ball;
+	BSingleBall *ball;
 };
 
 #endif // __GAME_SCENE_H__
