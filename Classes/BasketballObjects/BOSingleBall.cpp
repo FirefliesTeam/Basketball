@@ -10,12 +10,17 @@ USING_NS_CC;
 
 BSingleBall* BSingleBall::_single_ball = NULL;
 
-static BSingleBall* BSingleBall::GetSingleBall(cocos2d::Layer *layer, cocos2d::Vec2 position) {
+BSingleBall* BSingleBall::GetSingleBall(cocos2d::Layer *layer, cocos2d::Vec2 position) {
     if(_single_ball == NULL) 
         _single_ball = new BSingleBall(layer, position);
     return _single_ball;
 }
 
+//BSingleBall* BSingleBall::GetSingleBall() {
+//    if(_single_ball == NULL) 
+//        _single_ball = new BSingleBall();
+//    return _single_ball;
+//}
 
 BSingleBall::BSingleBall(Layer *layer, Vec2 position) : BObject() {
 	bitmask = BALL_COLLISION_BITMASK;

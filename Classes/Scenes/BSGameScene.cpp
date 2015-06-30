@@ -1,7 +1,7 @@
 #include "BSGameScene.h"
 #include "BSMainScene.h"
-//#include "../BasketballObjects/BOBall.h"
-#include "../BasketballObjects/BOSingleBall.h"
+#include "../BasketballObjects/BOBall.h"
+//#include "../BasketballObjects/BOSingleBall.h"
 #include "../Definitions/DefForScenes.h"
 #include "../PlankFactory/PlankFactory.h"
 
@@ -44,9 +44,11 @@ bool GameScene::init()
     this->addChild(sprite, 0);
 
 	
-	//ball = new BBall(this, Vec2(visibleSize.width/10, visibleSize.height/5 + origin.y));
+	ball = new BBall(this, Vec2(visibleSize.width/10, visibleSize.height/5));
     
-    BSingleBall* ball = BSingleBall::GetSingleBall(this, Vec2(visibleSize.width/10, visibleSize.height/5));
+    //BSingleBall* ball = BSingleBall::GetSingleBall(this, Vec2(visibleSize.width/10, visibleSize.height/5));
+    
+    //BSingleBall::GetSingleBall(this, Vec2(visibleSize.width/10, visibleSize.height/5));
     
     //ball->setPosition(Vec2(visibleSize.width/10, visibleSize.height/5 + origin.y));
     //ball->setLayer(this);
@@ -104,12 +106,11 @@ bool GameScene::startBallLaunching(Touch *touch, Event *_event) {
 	return true;
 }
 
-bool GameScene::setBallImpulse(cocos2d::Touch *touch, cocos2d::Event *_event) {
+void GameScene::setBallImpulse(cocos2d::Touch *touch, cocos2d::Event *_event) {
 	ball -> setImpulse(touch);
-    return true;	
 }
 
-bool GameScene::launchBall(cocos2d::Touch *touch, cocos2d::Event *_event) {
+void GameScene::launchBall(cocos2d::Touch *touch, cocos2d::Event *_event) {
 	ball -> launch(touch);
-	return true;
+	
 }
