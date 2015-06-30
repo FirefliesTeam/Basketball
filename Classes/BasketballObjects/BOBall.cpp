@@ -43,7 +43,7 @@ void  BBall::startLaunching(cocos2d::Touch *touch) {
 		impulse_vector -> setTag(IMPULSE_VECTOR_TAG);
 		impulse_vector -> setScale((start_touch_position - current_touch_position).getLength() * IMPULSE_VECTOR_SCALE_RATIO);
 		impulse_vector -> setRotation(this -> getLaunchingRotation(start_touch_position, current_touch_position));
-		Director::getInstance() ->getRunningScene() -> addChild(impulse_vector, 0);
+		Director::getInstance() -> getRunningScene() -> addChild(impulse_vector, 0);
 	}
 }
 

@@ -71,8 +71,8 @@ if(MSVC)
 else()
   set(CMAKE_C_FLAGS_DEBUG "-g -Wall -DCOCOS2D_DEBUG=1")
   set(CMAKE_CXX_FLAGS_DEBUG ${CMAKE_C_FLAGS_DEBUG})
-  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fno-exceptions -std=c99")
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-exceptions -std=c++11 -Wno-deprecated-declarations -Wno-reorder")
+  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fno-exceptions -std=c99 -fpermissive")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-exceptions -std=c++11 -Wno-deprecated-declarations -Wno-reorder -fpermissive")
   if(CLANG)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
   endif()
@@ -115,13 +115,69 @@ include_directories(
 
 set(GAME_SRC
   Classes/AppDelegate.cpp
-  Classes/HelloWorldScene.cpp
+  Classes/BasketballObjects/BOBall.cpp
+  Classes/BasketballObjects/BOBasket.cpp
+  Classes/BasketballObjects/BObject.cpp
+  Classes/BasketballObjects/BOGrid.cpp
+  Classes/BasketballObjects/BOMetalPlank.cpp
+  Classes/BasketballObjects/BOPlank.cpp
+  Classes/BasketballObjects/BORubberPlank.cpp
+  Classes/BasketballObjects/BOStar.cpp
+  Classes/BasketballObjects/BOWoodenPlank.cpp
+  Classes/BasketballObjects/BOSingleBall.cpp
+  Classes/Scenes/BSChooseLevelScene.cpp
+  Classes/Scenes/BSGameScene.cpp
+  Classes/Scenes/BSMainScene.cpp
+  Classes/Scenes/BSSettingScene.cpp
+  Classes/Scenes/BSSplashScene.cpp
+  Classes/SonarSystemsBodyParser/SonarSystemsBodyParser.cpp
+  Classes/Temp/tempScene.cpp
+  Classes/Temp/tempScene2.cpp
+  Classes/AppDelegate.cpp
+  Classes/PlankFactory/PlankFactory.cpp
   ${PLATFORM_SPECIFIC_SRC}
 )
 
 set(GAME_HEADERS
   Classes/AppDelegate.h
-  Classes/HelloWorldScene.h
+  Classes/BasketballObjects/BOBall.h
+  Classes/BasketballObjects/BOBasket.h
+  Classes/BasketballObjects/BObject.h
+  Classes/BasketballObjects/BOGrid.h
+  Classes/BasketballObjects/BOMetalPlank.h
+  Classes/BasketballObjects/BOPlank.h
+  Classes/BasketballObjects/BORubberPlank.h
+  Classes/BasketballObjects/BOStar.h
+  Classes/BasketballObjects/BOWoodenPlank.h
+  Classes/Definitions/DefForBall.h
+  Classes/Definitions/DefForBasket.h
+  Classes/Definitions/DefForGrid.h
+  Classes/Definitions/DefForPlanks.h
+  Classes/Definitions/DefForScenes.h
+  Classes/Definitions/DefForStar.h
+  Classes/Definitions/DefForSriteTags.h
+  Classes/Definitions/Definitions.h
+  Classes/Scenes/BSChooseLevelScene.h
+  Classes/Scenes/BSGameScene.h
+  Classes/Scenes/BSMainScene.h
+  Classes/Scenes/BSSettingScene.h
+  Classes/Scenes/BSSplashScene.h
+  Classes/SonarSystemsBodyParser/json/document.h
+  Classes/SonarSystemsBodyParser/json/filestream.h
+  Classes/SonarSystemsBodyParser/json/internal/pow10.h
+  Classes/SonarSystemsBodyParser/json/internal/stack.h
+  Classes/SonarSystemsBodyParser/json/internal/strfunc.h
+  Classes/SonarSystemsBodyParser/json/prettywriter.h
+  Classes/SonarSystemsBodyParser/json/rapidjson.h
+  Classes/SonarSystemsBodyParser/json/reader.h
+  Classes/SonarSystemsBodyParser/json/stringbuffer.h
+  Classes/SonarSystemsBodyParser/json/writer.h
+  Classes/SonarSystemsBodyParser/SonarSystemsBodyParser.h
+  Classes/Temp/tempScene.h
+  Classes/Temp/tempScene2.h
+  Classes/PlankFactory/IPlankFactory.h
+  Classes/PlankFactory/PlankFactory.h
+  Classes/BasketballObjects/BOSingleBall.h
   ${PLATFORM_SPECIFIC_HEADERS}
 )
 

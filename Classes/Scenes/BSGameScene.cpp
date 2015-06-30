@@ -46,7 +46,7 @@ bool GameScene::init()
 	
 	//ball = new BBall(this, Vec2(visibleSize.width/10, visibleSize.height/5 + origin.y));
     
-    BSingleBall* ball = BSingleBall::GetSingleBall(this, Vec2(visibleSize.width/10, visibleSize.height/5 + origin.y));
+    BSingleBall* ball = BSingleBall::GetSingleBall(this, Vec2(visibleSize.width/10, visibleSize.height/5));
     
     //ball->setPosition(Vec2(visibleSize.width/10, visibleSize.height/5 + origin.y));
     //ball->setLayer(this);
@@ -88,12 +88,14 @@ void GameScene::edgeBoxInit() {
 
 void GameScene::setEventListeners() {
 
+    
 	auto touch_listener = EventListenerTouchOneByOne::create();
 	touch_listener -> setSwallowTouches(true);
 	touch_listener -> onTouchBegan = CC_CALLBACK_2(GameScene::startBallLaunching, this);
 	touch_listener -> onTouchMoved = CC_CALLBACK_2(GameScene::setBallImpulse, this);	
 	touch_listener -> onTouchEnded = CC_CALLBACK_2(GameScene::launchBall, this);	
-	this -> getEventDispatcher() -> addEventListenerWithSceneGraphPriority(touch_listener, this);
+    this -> getEventDispatcher() -> addEventListenerWithSceneGraphPriority(touch_listener, this);
+	
 }
 
 bool GameScene::startBallLaunching(Touch *touch, Event *_event) {
@@ -102,11 +104,12 @@ bool GameScene::startBallLaunching(Touch *touch, Event *_event) {
 	return true;
 }
 
-void GameScene::setBallImpulse(cocos2d::Touch *touch, cocos2d::Event *_event) {
+bool GameScene::setBallImpulse(cocos2d::Touch *touch, cocos2d::Event *_event) {
 	ball -> setImpulse(touch);
-	
+    return true;	
 }
 
-void GameScene::launchBall(cocos2d::Touch *touch, cocos2d::Event *_event) {
+bool GameScene::launchBall(cocos2d::Touch *touch, cocos2d::Event *_event) {
 	ball -> launch(touch);
+	return true;
 }

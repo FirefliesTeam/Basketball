@@ -2,8 +2,8 @@
 #define __TEMP_SCENE2_H__
 
 #include <iostream>
-#include "BasketballObjects\BOBall.h"
-#include "BasketballObjects\BOPlank.h"
+#include "BasketballObjects/BOBall.h"
+#include "BasketballObjects/BOPlank.h"
 #include "cocos2d.h"
 
 class TempScene2 : public cocos2d::Layer

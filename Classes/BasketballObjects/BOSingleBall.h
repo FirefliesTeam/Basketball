@@ -18,8 +18,6 @@ class BSingleBall : public BObject
         
     
 	public:
-		//BSingleBall();
-		//BSingleBall(cocos2d::Layer *layer, cocos2d::Vec2 position);
 		~BSingleBall();
 
 		void setPosition(cocos2d::Vec2 position);

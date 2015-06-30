@@ -2,7 +2,7 @@
 #define __GAME_SCENE_H__
 
 //#include "BasketballObjects\BOBall.h"
-#include "BasketballObjects\BOSingleBall.h"
+#include "BasketballObjects/BOSingleBall.h"
 #include "cocos2d.h"
 
 class GameScene : public cocos2d::Layer
@@ -25,8 +25,8 @@ public:
 	void setEventListeners();
 
 	bool startBallLaunching(cocos2d::Touch *touch, cocos2d::Event *_event);
-	void setBallImpulse(cocos2d::Touch *touch, cocos2d::Event *_event);
-	void launchBall(cocos2d::Touch *touch, cocos2d::Event *_event);
+	bool setBallImpulse(cocos2d::Touch *touch, cocos2d::Event *_event);
+	bool launchBall(cocos2d::Touch *touch, cocos2d::Event *_event);
 
 private:
 	BSingleBall *ball;
