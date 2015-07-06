@@ -119,11 +119,8 @@ set(GAME_SRC
   Classes/BasketballObjects/BOBasket.cpp
   Classes/BasketballObjects/BObject.cpp
   Classes/BasketballObjects/BOGrid.cpp
-  Classes/BasketballObjects/BOMetalPlank.cpp
   Classes/BasketballObjects/BOPlank.cpp
-  Classes/BasketballObjects/BORubberPlank.cpp
   Classes/BasketballObjects/BOStar.cpp
-  Classes/BasketballObjects/BOWoodenPlank.cpp
   Classes/Scenes/BSChooseLevelScene.cpp
   Classes/Scenes/BSGameScene.cpp
   Classes/Scenes/BSMainScene.cpp
@@ -145,11 +142,8 @@ set(GAME_HEADERS
   Classes/BasketballObjects/BOBasket.h
   Classes/BasketballObjects/BObject.h
   Classes/BasketballObjects/BOGrid.h
-  Classes/BasketballObjects/BOMetalPlank.h
   Classes/BasketballObjects/BOPlank.h
-  Classes/BasketballObjects/BORubberPlank.h
   Classes/BasketballObjects/BOStar.h
-  Classes/BasketballObjects/BOWoodenPlank.h
   Classes/BasketballObjects/BOPlankType.h   
   Classes/Definitions/DefForBall.h
   Classes/Definitions/DefForBasket.h
