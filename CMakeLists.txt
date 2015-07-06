@@ -124,12 +124,13 @@ set(GAME_SRC
   Classes/BasketballObjects/BORubberPlank.cpp
   Classes/BasketballObjects/BOStar.cpp
   Classes/BasketballObjects/BOWoodenPlank.cpp
-  Classes/BasketballObjects/BOSingleBall.cpp
   Classes/Scenes/BSChooseLevelScene.cpp
   Classes/Scenes/BSGameScene.cpp
   Classes/Scenes/BSMainScene.cpp
   Classes/Scenes/BSSettingScene.cpp
   Classes/Scenes/BSSplashScene.cpp
+  Classes/Scenes/BSPreparingScene.cpp
+  Classes/Scenes/BSLaunchScene.cpp
   Classes/SonarSystemsBodyParser/SonarSystemsBodyParser.cpp
   Classes/Temp/tempScene.cpp
   Classes/Temp/tempScene2.cpp
@@ -149,6 +150,7 @@ set(GAME_HEADERS
   Classes/BasketballObjects/BORubberPlank.h
   Classes/BasketballObjects/BOStar.h
   Classes/BasketballObjects/BOWoodenPlank.h
+  Classes/BasketballObjects/BOPlankType.h   
   Classes/Definitions/DefForBall.h
   Classes/Definitions/DefForBasket.h
   Classes/Definitions/DefForGrid.h
@@ -162,6 +164,8 @@ set(GAME_HEADERS
   Classes/Scenes/BSMainScene.h
   Classes/Scenes/BSSettingScene.h
   Classes/Scenes/BSSplashScene.h
+  Classes/Scenes/BSPreparingScene.h
+  Classes/Scenes/BSLaunchScene.h
   Classes/SonarSystemsBodyParser/json/document.h
   Classes/SonarSystemsBodyParser/json/filestream.h
   Classes/SonarSystemsBodyParser/json/internal/pow10.h
@@ -177,7 +181,6 @@ set(GAME_HEADERS
   Classes/Temp/tempScene2.h
   Classes/PlankFactory/IPlankFactory.h
   Classes/PlankFactory/PlankFactory.h
-  Classes/BasketballObjects/BOSingleBall.h
   ${PLATFORM_SPECIFIC_HEADERS}
 )
 
