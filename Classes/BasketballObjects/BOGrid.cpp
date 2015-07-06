@@ -6,7 +6,7 @@ USING_NS_CC;
 BGrid::BGrid(cocos2d::Layer *layer) {
     origin = Director::getInstance()->getVisibleOrigin();
     visible_size = Director::getInstance()->getVisibleSize();
-
+        
     grid_point = Sprite::create(GRID_POINT_SPRITE);
     grid_point->setPosition(Vec2(-1 + origin.x, -1 + origin.y));
     layer->addChild(grid_point, GRID_POINT_PREORITY);
