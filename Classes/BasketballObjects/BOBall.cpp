@@ -12,7 +12,7 @@ BBall::BBall(Layer *layer, Vec2 position) : BObject() {
 	bitmask = BALL_COLLISION_BITMASK;
 	material = PhysicsMaterial::PhysicsMaterial(BALL_DENSITY, BALL_RESTITUTION, BALL_FRICTION);
 	sprite = Sprite::create("ball_sprite.png");
-	body = PhysicsBody::createCircle(sprite->getContentSize().width/2, material);
+	body = PhysicsBody::createCircle(sprite->getContentSize().width/2 - 5, material);
 	body -> setGravityEnable(false);
 	sprite -> setPhysicsBody(body);
 	sprite -> setPosition(position);

@@ -2,6 +2,7 @@
 #include "BSGameScene.h"
 #include "BSChooseLevelScene.h"
 #include "BSSettingScene.h"
+#include "BSPreparingScene.h"
 #include "../Definitions/DefForScenes.h"
 #include "../Temp/tempScene.h"
 #include "../Temp/tempScene2.h"
@@ -84,7 +85,8 @@ bool MainScene::init()
 }
 
 void MainScene::GoToNewGame(cocos2d::Ref *sender) {
-    auto game_scene = GameScene::createScene();
+    //auto game_scene = GameScene::createScene();
+    auto game_scene = PreparingScene::createScene();
     Director::getInstance()->replaceScene(TransitionFade::create(TRANSITION_TIME, game_scene));
 }
 

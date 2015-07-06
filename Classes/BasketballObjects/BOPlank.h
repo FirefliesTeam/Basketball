@@ -3,6 +3,7 @@
 
 #include "BObject.h"
 #include "cocos2d.h"
+#include "BOPlankType.h"
 
 class BPlank: public BObject {
 public:
