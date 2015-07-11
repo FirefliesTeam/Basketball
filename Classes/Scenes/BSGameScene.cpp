@@ -44,14 +44,9 @@ bool GameScene::init()
     this->addChild(sprite, 0);
 
 	
-	ball = new BBall(this, Vec2(visibleSize.width/10, visibleSize.height/5));
-    
-    //BSingleBall* ball = BSingleBall::GetSingleBall(this, Vec2(visibleSize.width/10, visibleSize.height/5));
-    
-    //BSingleBall::GetSingleBall(this, Vec2(visibleSize.width/10, visibleSize.height/5));
-    
-    //ball->setPosition(Vec2(visibleSize.width/10, visibleSize.height/5 + origin.y));
-    //ball->setLayer(this);
+	ball = new BBall();
+    this -> addChild(ball -> getSprite());
+    ball->setPosition(Vec2(visibleSize.width/10, visibleSize.height/5));
     
 	this -> edgeBoxInit();
 	this -> setEventListeners();

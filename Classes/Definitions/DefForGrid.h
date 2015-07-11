@@ -1,5 +1,5 @@
-#ifndef __DEF_FORG_GRID_H__
-#define __DEF_FORG_GRID_H__
+#ifndef __DEF_FOR_GRID_H__
+#define __DEF_FOR_GRID_H__
 
 #define GRID_PERIOD 25
 #define GRID_LINE_SPRITE "line.png"

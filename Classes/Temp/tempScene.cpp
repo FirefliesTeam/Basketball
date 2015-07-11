@@ -4,7 +4,6 @@
 #include "../SonarSystemsBodyParser/SonarSystemsBodyParser.h"
 #include "../BasketballObjects/BOStar.h"
 #include "../BasketballObjects/BOBasket.h"
-#include "../BasketballObjects/BORubberPlank.h"
 
 USING_NS_CC;
 
@@ -65,10 +64,12 @@ bool TempScene::init()
 
         this->addChild(edge_node);
  
-    BStar* star = new BStar(this);
+    BStar* star = new BStar();
+    this -> addChild(star -> getSprite());
     star->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + 300 + origin.y));
 
-    BBasket* basket = new BBasket(this);
+    BBasket* basket = new BBasket();
+    this -> addChild(basket -> getSprite());
     basket->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
 
     auto touchListener = EventListenerTouchOneByOne::create();
@@ -80,10 +81,6 @@ bool TempScene::init()
 
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListener, this);
 
-    BRubberPlank* r_plank = new BRubberPlank(2, 2, 1, this);
-    r_plank->setPosition(Vec2(visibleSize.width / 4 * 3 + origin.x, visibleSize.height / 8 * 5 + origin.y));
-    //r_plank->Rotate(150);
-    r_plank->Rotate(-20);
 
     return true;
 }
@@ -109,6 +106,7 @@ void TempScene::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event) {
 }
 
  void TempScene::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event) {
-    BStar* star = new BStar(this);
+    BStar* star = new BStar();
+    this -> addChild(star -> getSprite());
     star->setPosition(Vec2(touch->getLocation().x, touch->getLocation().y));
 }

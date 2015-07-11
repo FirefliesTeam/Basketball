@@ -39,7 +39,7 @@ public:
     bool createLevel();
     
     //Define the level number to create
-    void inputLevelNumber(int num);
+    void inputLevelNumber(char num);
     
     //First touch: Open Plank store to put plank on touch place 
     void openPlankStore();
@@ -55,13 +55,12 @@ public:
 
 private:
 	BBall *ball;
-	std::vector<BPlank*> ScenePlanks;
-	int level_number;
+	std::vector<BObject*> SceneObjects;
+	char level_number;
 	// true when plank menu is open by first touch
 	bool is_changing_plank;
 	// true when plank store is open by first touch
 	bool is_putting_plank;
-	
 };
 
 #endif // __PREPARING_SCENE_H__

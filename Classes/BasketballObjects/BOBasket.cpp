@@ -1,10 +1,11 @@
 #include "BOBasket.h"
 #include "../Definitions/DefForBasket.h"
+#include "../Definitions/DefForStrings.h"
 #include "../SonarSystemsBodyParser/SonarSystemsBodyParser.h"
 
 USING_NS_CC;
 
-BBasket::BBasket(cocos2d::Layer* layer) {
+BBasket::BBasket() {
     material = PhysicsMaterial(BASKET_PLANK_DENSITY, BASKET_PLANK_RESTITUTION, BASKET_PALNK_FRICTION);
     bitmask = BASKET_COLLISION_BITMASK;
 
@@ -17,9 +18,6 @@ BBasket::BBasket(cocos2d::Layer* layer) {
     body->setDynamic(false);
     
     sprite->setPhysicsBody(body);
-
-    layer->addChild(sprite);
-
 
     //SonarSysBodyParser::getInstance()->parseJsonFile("newTest.json");
 
@@ -38,6 +36,6 @@ BBasket::~BBasket() {
 
 }
 
-void BBasket::setPosition(cocos2d::Vec2 coord) {
-    sprite->setPosition(coord);
+char BBasket::toString() {
+    return BASKET_NAME;
 }

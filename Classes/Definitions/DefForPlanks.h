@@ -15,7 +15,7 @@
 #define RUBBER_PLANK_RESTITUTION 0.1
 #define RUBBER_PLANK_FRICTION 0.1
 
-#define PLANK_ROTATE_TIME 0
+#define PLANK_ROTATE_TIME 1
 
 #define SMALL_PLANK 0.5
 #define NORMAL_PLANK 1
@@ -25,10 +25,10 @@
 #define METALL_PLANK_COST 2
 #define WOODEN_PLANK_COST 1
 
-#define WOODEN_PLANK "woddy plank.png"
+#define WOODEN_PLANK "wooden plank.png"
 #define METAL_PLANK "metal plank.png"
 #define RUBBER_PLANK "rubber plank.png"
 
-#define DESIGNATION_PLANK 'p'
+//#define DESIGNATION_PLANK 'p'
 
 #endif // __DEF_FOR_PLANKS_H__

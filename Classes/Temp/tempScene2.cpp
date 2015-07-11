@@ -1,11 +1,10 @@
-#include <iostream>
 #include <fstream>
 #include "cocos2d.h"
 #include "tempScene2.h"
 #include "../Scenes/BSMainScene.h"
+#include "../PlankFactory/PlankFactory.h"
 #include "../BasketballObjects/BOBall.h"
 #include "../BasketballObjects/BObject.h"
-#include "../BasketballObjects/BOMetalPlank.h"
 #include "../Definitions/DefForScenes.h"
 #include "../Definitions/DefForPlanks.h"
 
@@ -45,43 +44,28 @@ bool TempScene2::init()
     this->addChild(sprite, 0);
 	//////////////////////////
 
-	ball = new BBall(this, Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
+    ball = new BBall();
+	ball -> setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 2));
+    this -> addChild(ball -> getSprite());
+    auto plankFactory = new PlankFactory();    
+    
+    BObject  **plankArray = new BObject* [10];
+    plankArray[0] = plankFactory -> createWoodenPlank();
+    plankArray[1] = plankFactory -> createMetalPlank();
+    plankArray[2] = plankFactory -> createRubberPlank();        
+    
+    for (int i = 0; i < 3; i++)
+        this -> addChild(plankArray[i] -> getSprite());
+    
 	this->edgeBoxInit();
 	this->setEventListeners(ball);
 
-	std::ifstream fileS;
-	fileS.open("seralization.txt");
-	char typeObj;
-	BObject *obj = NULL;
-	while (fileS >> typeObj){
-		switch (typeObj){
-		case DESIGNATION_PLANK:
-			obj = new BMetalPlank(1, 1, 1.0, this);
-			obj->deserialize(fileS);
-			MetalPlanks.push_back(obj);
-			break;
-		//case 'b':
-		//	ball = new BBall(this);
-		//	ball->deserialize(fileS);
-		//	this->edgeBoxInit();
-		//	this->setEventListeners(ball);
-		//	break;
-		}
-	}
+	std::ofstream file("1.txt");
+    for (int i = 0; i < 3; i++)
+        file << *plankArray[i] << std::endl;
 
-    /*
-        Не знаю, прикрепится ли файл seralization.txt, если нет, то создать его в proj.win32:
-        p 1 1 45 150 150
-        p 1 1 135 350 150
-        p 1 1 15 50 400
-        p 1 1 0 300 496
-        p 1 1 167 100 500
-        p 1 1 45 800 500
-        p 1 1 135 800 100
-        b 100 100
-    */
 
-	fileS.close();
+	file.close();
 
     //////////////////////////
     auto menu_item = MenuItemFont::create("Go Back", CC_CALLBACK_1(TempScene2::GoBack, this));

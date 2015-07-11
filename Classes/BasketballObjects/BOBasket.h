@@ -6,13 +6,11 @@
 
 class BBasket: public BObject {
 public:
-    BBasket(cocos2d::Layer* layer);
+    BBasket();
     ~BBasket();
-
-    void setPosition(cocos2d::Vec2 coord);
-    void serialize(std::ofstream&){};
-	void deserialize(std::ifstream&){};
-
+    
+    char toString();    
+    
 };
 
 #endif // __BOBASKET_H__

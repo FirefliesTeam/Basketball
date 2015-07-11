@@ -1,29 +1,23 @@
-#include <iostream>
-#include <fstream>
 #include "BOBall.h"
 #include "../Definitions/DefForBall.h"
 #include "../Definitions/DefForSriteTags.h"
+#include "../Definitions/DefForStrings.h"
 #include <math.h>
 #include "cocos2d.h"
 
+
+
 USING_NS_CC;
 
-BBall::BBall(Layer *layer, Vec2 position) : BObject() {
+BBall::BBall() : BObject() {
 	bitmask = BALL_COLLISION_BITMASK;
 	material = PhysicsMaterial::PhysicsMaterial(BALL_DENSITY, BALL_RESTITUTION, BALL_FRICTION);
 	sprite = Sprite::create("ball_sprite.png");
 	body = PhysicsBody::createCircle(sprite->getContentSize().width/2 - 5, material);
 	body -> setGravityEnable(false);
 	sprite -> setPhysicsBody(body);
-	sprite -> setPosition(position);
-	layer -> addChild(sprite, 0);
 	is_flying = false;
 }
-
-void BBall::setPosition(cocos2d::Vec2 position) {
-	sprite -> setPosition(position);
-}
-
 
 float BBall::getLaunchingRotation(Vec2& start_touch_position, Vec2& current_touch_position) {
 	float rotate_angle = (current_touch_position - start_touch_position).getAngle();
@@ -73,21 +67,12 @@ void BBall::launch(cocos2d::Touch *touch) {
 	}
 }
 
+char BBall::toString() {
+    return BALL_NAME;
+}
+
 BBall::~BBall() {
 
 }
 
-void BBall::serialize(std::ofstream& file){
-	//file << 'b' << std::endl;
-}
 
-void BBall::deserialize(std::ifstream& file){
-	int x = 0;
-	int y = 0;
-
-	velocity = cocos2d::Vec2(0, 0);
-	acceleration = cocos2d::Vec2(0, 0);
-	//is_flying = false;
-	file >> x >> y;
-	setPosition(Vec2(x, y));
-}

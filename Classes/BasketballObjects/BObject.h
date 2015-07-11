@@ -2,6 +2,9 @@
 #define __BASKETBALL_OBJECT_H__
 
 #include "cocos2d.h"
+#include <iostream>
+#include <string>
+using namespace std;
 
 // почему нет чистого виртуального метода setPosition??????
 
@@ -10,9 +13,18 @@ class BObject
 	public:
 		BObject();
 		~BObject();
-		virtual void serialize(std::ofstream&) = 0;
-		virtual void deserialize(std::ifstream&) = 0;
-		cocos2d::Sprite* getSprite() { return sprite; }
+		
+		friend ostream& operator << (ostream &os, const BObject &obj);
+		friend istream& operator >> (istream &is, BObject *&obj);
+		
+		virtual char toString() = 0;
+		
+		
+		cocos2d::Sprite* getSprite();
+        
+        void setPosition(cocos2d::Vec2 position);		
+        void rotate(float angle);
+        
 	protected:
 		//»нициализируютс€ в конструкторе базового класса
 		cocos2d::Size				visible_size;
@@ -22,6 +34,8 @@ class BObject
 		cocos2d::PhysicsBody		*body;
 		unsigned int				bitmask;
 		cocos2d::PhysicsMaterial	material;
+		
+		float rotate_angle;
 };
 
 

@@ -5,7 +5,6 @@
 
 #include "cocos2d.h"
 #include "IPlankFactory.h"
-#include "../BasketballObjects/BOPlank.h"
 
 class PlankFactory: public IPlankFactory
 {
